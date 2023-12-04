@@ -1,6 +1,6 @@
 ﻿#Setting up workflow for nuget (continuous deployment)
 
-name: "Release to Nuget (Automatic Versioning) 📄🛠️🚀📦💾🌐"
+name: "Release to Nuget Baseframework (Automatic Versioning) 📄🛠️🚀📦💾🌐"
 
 on:
   push:
@@ -32,29 +32,41 @@ jobs:
       with:
         dotnet-version: '6.0.x'
     #--------------------------------------
-    - name: '🛠️Restore packages'
+    - name: '🛠️Restore package dapper'
       run: dotnet restore  ${{ env.PROJECT_PATH_DAPPER }}
+    - name: '🛠️Restore package EntityFrameworkCore'
       run: dotnet restore  ${{ env.PROJECT_PATH_EntityFrameworkCore }}
+    - name: '🛠️Restore package Domain'      
       run: dotnet restore  ${{ env.PROJECT_PATH_DOMAIN }}
+    - name: '🛠️Restore package Repository'
       run: dotnet restore  ${{ env.PROJECT_PATH_REPOSITORY }}
+    - name: '🛠️Restore package Shared'
       run: dotnet restore  ${{ env.PROJECT_PATH_SHARED }}
     #--------------------------------------
-    - name: '🚀Build project'
+    - name: '🚀Build dapper project'
       run: dotnet build ${{ env.PROJECT_PATH_DAPPER }} --no-restore --configuration Release
+    - name: '🚀Build entityframework project'
       run: dotnet build ${{ env.PROJECT_PATH_EntityFrameworkCore }} --no-restore --configuration Release
+    - name: '🚀Build domain project'
       run: dotnet build ${{ env.PROJECT_PATH_DOMAIN }} --no-restore --configuration Release
+    - name: '🚀Build repository project'
       run: dotnet build ${{ env.PROJECT_PATH_REPOSITORY }} --no-restore --configuration Release
+    - name: '🚀Build shared project'
       run: dotnet build ${{ env.PROJECT_PATH_SHARED }} --no-restore --configuration Release
     #--------------------------------------
     -  name: '🛠️Get version'
        id: version
        uses: battila7/get-version-action@v2
     #--------------------------------------
-    - name: '📦Pack projects'
+    - name: '📦Pack dapper project'
       run: dotnet pack ${{ env.PROJECT_PATH_DAPPER }} --no-restore --no-build --configuration Release --include-symbols -p:PackageVersion=${{steps.version.outputs.version-without-v}}  --output ${{env.PACKAGE_OUTPUT_DIRECTORY}}
+    - name: '📦Pack domain project'
       run: dotnet pack ${{ env.PROJECT_PATH_DOMAIN }} --no-restore --no-build --configuration Release --include-symbols -p:PackageVersion=${{steps.version.outputs.version-without-v}}  --output ${{env.PACKAGE_OUTPUT_DIRECTORY}}
+    - name: '📦Pack entityframework project'
       run: dotnet pack ${{ env.PROJECT_PATH_EntityFrameworkCore }} --no-restore --no-build --configuration Release --include-symbols -p:PackageVersion=${{steps.version.outputs.version-without-v}}  --output ${{env.PACKAGE_OUTPUT_DIRECTORY}}
+    - name: '📦Pack repository project'     
       run: dotnet pack ${{ env.PROJECT_PATH_REPOSITORY }} --no-restore --no-build --configuration Release --include-symbols -p:PackageVersion=${{steps.version.outputs.version-without-v}}  --output ${{env.PACKAGE_OUTPUT_DIRECTORY}}
+    - name: '📦Pack shared project'
       run: dotnet pack ${{ env.PROJECT_PATH_SHARED }} --no-restore --no-build --configuration Release --include-symbols -p:PackageVersion=${{steps.version.outputs.version-without-v}}  --output ${{env.PACKAGE_OUTPUT_DIRECTORY}}
     #--------------------------------------
     - name: '🌐Push packages'
