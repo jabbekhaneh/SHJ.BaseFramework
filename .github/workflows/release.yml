@@ -2,78 +2,53 @@
 
 name: "Release to Nuget Baseframework (Automatic Versioning) 📄🛠️🚀📦💾🌐"
 
+
+name: Build
+
 on:
+  workflow_dispatch:
   push:
     tags:
        - "v*"
 
-env:
-  #-----------------------------------------------------------------------------------
-  PROJECT_PATH_DAPPER: ' src/SHJ.BaseFramework.Dapper/SHJ.BaseFramework.Dapper.csproj'
-  PROJECT_PATH_EntityFrameworkCore: 'src/SHJ.BaseFramework.EntityFrameworkCore/SHJ.BaseFramework.EntityFrameworkCore.csproj'
-  PROJECT_PATH_DOMAIN: 'src/SHJ.BaseFramework.Domain/SHJ.BaseFramework.Domain.csproj'
-  PROJECT_PATH_REPOSITORY: 'src/SHJ.BaseFramework.Repository/SHJ.BaseFramework.Repository.csproj'
-  PROJECT_PATH_SHARED: 'src/SHJ.BaseFramework.Shared/SHJ.BaseFramework.Shared.csproj'
-  #-----------------------------------------------------------------------------------
-  PACKAGE_OUTPUT_DIRECTORY: ${{github.workspace}}\output
-  NUGET_SOURCE_URL: 'https://api.nuget.org/v3/index.json'
-  #-----------------------------------------------------------------------------------      
 jobs:
-  deploy:
-    name: 'Deploy'
-    runs-on: 'windows-latest'
-   #--------------------------------------
+  build:
+
+    runs-on: ubuntu-latest
+#------------------------------------
     steps:
-    - name: '📄Checkout'
-      uses: actions/checkout@v2
-    #--------------------------------------
-    - name: '🛠️Install .NET'
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0 # depth is needed for nbgv
+    - uses: dotnet/nbgv@master
+      with:
+        setAllVars: true
+#------------------------------------
+    - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '6.0.x'
-    #--------------------------------------
-    - name: '🛠️Restore package dapper'
-      run: dotnet restore  ${{ env.PROJECT_PATH_DAPPER }}
-    - name: '🛠️Restore package EntityFrameworkCore'
-      run: dotnet restore  ${{ env.PROJECT_PATH_EntityFrameworkCore }}
-    - name: '🛠️Restore package Domain'      
-      run: dotnet restore  ${{ env.PROJECT_PATH_DOMAIN }}
-    - name: '🛠️Restore package Repository'
-      run: dotnet restore  ${{ env.PROJECT_PATH_REPOSITORY }}
-    - name: '🛠️Restore package Shared'
-      run: dotnet restore  ${{ env.PROJECT_PATH_SHARED }}
-    #--------------------------------------
-    - name: '🚀Build dapper project'
-      run: dotnet build ${{ env.PROJECT_PATH_DAPPER }} --no-restore --configuration Release
-    - name: '🚀Build entityframework project'
-      run: dotnet build ${{ env.PROJECT_PATH_EntityFrameworkCore }} --no-restore --configuration Release
-    - name: '🚀Build domain project'
-      run: dotnet build ${{ env.PROJECT_PATH_DOMAIN }} --no-restore --configuration Release
-    - name: '🚀Build repository project'
-      run: dotnet build ${{ env.PROJECT_PATH_REPOSITORY }} --no-restore --configuration Release
-    - name: '🚀Build shared project'
-      run: dotnet build ${{ env.PROJECT_PATH_SHARED }} --no-restore --configuration Release
-    #--------------------------------------
-    -  name: '🛠️Get version'
-       id: version
-       uses: battila7/get-version-action@v2
-    #--------------------------------------
-    - name: '📦Pack dapper project'
-      run: dotnet pack ${{ env.PROJECT_PATH_DAPPER }} --no-restore --no-build --configuration Release --include-symbols -p:PackageVersion=${{steps.version.outputs.version-without-v}}  --output ${{env.PACKAGE_OUTPUT_DIRECTORY}}
-    - name: '📦Pack domain project'
-      run: dotnet pack ${{ env.PROJECT_PATH_DOMAIN }} --no-restore --no-build --configuration Release --include-symbols -p:PackageVersion=${{steps.version.outputs.version-without-v}}  --output ${{env.PACKAGE_OUTPUT_DIRECTORY}}
-    - name: '📦Pack entityframework project'
-      run: dotnet pack ${{ env.PROJECT_PATH_EntityFrameworkCore }} --no-restore --no-build --configuration Release --include-symbols -p:PackageVersion=${{steps.version.outputs.version-without-v}}  --output ${{env.PACKAGE_OUTPUT_DIRECTORY}}
-    - name: '📦Pack repository project'     
-      run: dotnet pack ${{ env.PROJECT_PATH_REPOSITORY }} --no-restore --no-build --configuration Release --include-symbols -p:PackageVersion=${{steps.version.outputs.version-without-v}}  --output ${{env.PACKAGE_OUTPUT_DIRECTORY}}
-    - name: '📦Pack shared project'
-      run: dotnet pack ${{ env.PROJECT_PATH_SHARED }} --no-restore --no-build --configuration Release --include-symbols -p:PackageVersion=${{steps.version.outputs.version-without-v}}  --output ${{env.PACKAGE_OUTPUT_DIRECTORY}}
-    #--------------------------------------
-    - name: '🌐Push packages'
-      run: dotnet nuget push **/*.nupkg -k ${{ secrets.NUGET_AUTH_KEY }}  -s ${{ env.NUGET_SOURCE_URL }} --skip-duplicate
-    #--------------------------------------  
-      
-
-    
-
-      
+        include-prerelease: true
+#------------------------------------
+    - name: Restore dependencies
+      run: dotnet restore Build.csproj
+#------------------------------------
+    - name: Build
+      run: dotnet build Build.csproj --no-restore -c Release
+#------------------------------------
+    # - name: Test
+    #   run: dotnet test Build.csproj --no-build --verbosity normal -c Release -f net6.0
+#------------------------------------
+    - name: Pack
+      if: ${{ success() && !github.base_ref }}
+      run: |
+        dotnet pack src/SHJ.BaseFramework.Domain/SHJ.BaseFramework.Domain.csproj --no-build --verbosity normal -c Release -o artifacts/ && \
+        dotnet pack src/SHJ.BaseFramework.Repository/SHJ.BaseFramework.Repository.csproj --no-build --verbosity normal -c Release -o artifacts/ && \
+        dotnet pack src/SHJ.BaseFramework.EntityFrameworkCore/SHJ.BaseFramework.EntityFrameworkCore.csproj --no-build --verbosity normal -c Release -o artifacts/ && \
+        dotnet pack src/SHJ.BaseFramework.Dapper/SHJ.BaseFramework.Dapper.csproj --no-build --verbosity normal -c Release -o artifacts/ && \
+        dotnet pack src/SHJ.BaseFramework.Shared/SHJ.BaseFramework.Shared.csproj --no-build --verbosity normal -c Release -o artifacts/ 
+#------------------------------------
+    - name: Push to NuGet
+      if: ${{ success() && !github.base_ref }}
+      run: dotnet nuget push artifacts/**.nupkg -s https://api.nuget.org/v3/index.json --api-key ${{secrets.NUGET_API_KEY}}
+#------------------------------------      
