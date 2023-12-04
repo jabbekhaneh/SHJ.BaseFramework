@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>SHJ.BaseFramework.EntityFrameworkCore</id>
+    <version>0.0.0.1</version>
+    <authors>SHJ.BaseFramework.EntityFrameworkCore</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="SHJ.BaseFramework.Domain" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="SHJ.BaseFramework.Repository" version="0.0.0.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore" version="6.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\bin\Debug\net6.0\SHJ.BaseFramework.EntityFrameworkCore.dll" target="lib\net6.0\SHJ.BaseFramework.EntityFrameworkCore.dll" />
+  </files>
+</package>

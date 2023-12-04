@@ -1,0 +1,67 @@
+﻿#Setting up workflow for nuget (continuous deployment)
+
+name: "Release to Nuget (Automatic Versioning) 📄🛠️🚀📦💾🌐"
+
+on:
+  push:
+    tags:
+       - "v*"
+
+env:
+  #-----------------------------------------------------------------------------------
+  PROJECT_PATH_DAPPER: ' src/SHJ.BaseFramework.Dapper/SHJ.BaseFramework.Dapper.cspro'
+  PROJECT_PATH_EntityFrameworkCore: 'src/SHJ.BaseFramework.EntityFrameworkCore/SHJ.BaseFramework.EntityFrameworkCore.csproj'
+  PROJECT_PATH_DOMAIN: 'src/SHJ.BaseFramework.Domain/SHJ.BaseFramework.Domain.csproj'
+  PROJECT_PATH_REPOSITORY: 'src/SHJ.BaseFramework.Repository/SHJ.BaseFramework.Repository.csproj'
+  PROJECT_PATH_SHARED: 'src/SHJ.BaseFramework.Shared/SHJ.BaseFramework.Shared.csproj'
+  #-----------------------------------------------------------------------------------
+  PACKAGE_OUTPUT_DIRECTORY: ${{github.workspace}}\output
+  NUGET_SOURCE_URL: 'https://api.nuget.org/v3/index.json'
+  #-----------------------------------------------------------------------------------      
+jobs:
+  deploy:
+    name: 'Deploy'
+    runs-on: 'windows-latest'
+   #--------------------------------------
+    steps:
+    - name: '📄Checkout'
+      uses: actions/checkout@v2
+    #--------------------------------------
+    - name: '🛠️Install .NET'
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '6.0.x'
+    #--------------------------------------
+    - name: '🛠️Restore packages'
+      run: dotnet restore  ${{ env.PROJECT_PATH_DAPPER }}
+      run: dotnet restore  ${{ env.PROJECT_PATH_EntityFrameworkCore }}
+      run: dotnet restore  ${{ env.PROJECT_PATH_DOMAIN }}
+      run: dotnet restore  ${{ env.PROJECT_PATH_REPOSITORY }}
+      run: dotnet restore  ${{ env.PROJECT_PATH_SHARED }}
+    #--------------------------------------
+    - name: '🚀Build project'
+      run: dotnet build ${{ env.PROJECT_PATH_DAPPER }} --no-restore --configuration Release
+      run: dotnet build ${{ env.PROJECT_PATH_EntityFrameworkCore }} --no-restore --configuration Release
+      run: dotnet build ${{ env.PROJECT_PATH_DOMAIN }} --no-restore --configuration Release
+      run: dotnet build ${{ env.PROJECT_PATH_REPOSITORY }} --no-restore --configuration Release
+      run: dotnet build ${{ env.PROJECT_PATH_SHARED }} --no-restore --configuration Release
+    #--------------------------------------
+    -  name: '🛠️Get version'
+       id: version
+       uses: battila7/get-version-action@v2
+    #--------------------------------------
+    - name: '📦Pack projects'
+      run: dotnet pack ${{ env.PROJECT_PATH_DAPPER }} --no-restore --no-build --configuration Release --include-symbols -p:PackageVersion=${{steps.version.outputs.version-without-v}}  --output ${{env.PACKAGE_OUTPUT_DIRECTORY}}
+      run: dotnet pack ${{ env.PROJECT_PATH_DOMAIN }} --no-restore --no-build --configuration Release --include-symbols -p:PackageVersion=${{steps.version.outputs.version-without-v}}  --output ${{env.PACKAGE_OUTPUT_DIRECTORY}}
+      run: dotnet pack ${{ env.PROJECT_PATH_EntityFrameworkCore }} --no-restore --no-build --configuration Release --include-symbols -p:PackageVersion=${{steps.version.outputs.version-without-v}}  --output ${{env.PACKAGE_OUTPUT_DIRECTORY}}
+      run: dotnet pack ${{ env.PROJECT_PATH_REPOSITORY }} --no-restore --no-build --configuration Release --include-symbols -p:PackageVersion=${{steps.version.outputs.version-without-v}}  --output ${{env.PACKAGE_OUTPUT_DIRECTORY}}
+      run: dotnet pack ${{ env.PROJECT_PATH_SHARED }} --no-restore --no-build --configuration Release --include-symbols -p:PackageVersion=${{steps.version.outputs.version-without-v}}  --output ${{env.PACKAGE_OUTPUT_DIRECTORY}}
+    #--------------------------------------
+    - name: '🌐Push packages'
+      run: dotnet nuget push **/*.nupkg -k ${{ secrets.NUGET_AUTH_KEY }}  -s ${{ env.NUGET_SOURCE_URL }} --skip-duplicate
+    #--------------------------------------  
+      
+
+    
+
+      

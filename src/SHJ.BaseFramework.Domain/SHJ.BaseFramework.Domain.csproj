@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<PackageIcon>logo.png</PackageIcon>
+		<PackageProjectUrl>https://github.com/jabbekhaneh/SHJ.BaseFramework</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/jabbekhaneh/SHJ.BaseFramework</RepositoryUrl>
+		<Description>For Asp net Architect</Description>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Include="..\..\assets\logo\logo.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
+
+</Project>

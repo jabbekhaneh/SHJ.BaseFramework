@@ -1,0 +1,12 @@
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.Repository\bin\Debug\net6.0\SHJ.BaseFramework.Repository.deps.json
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.Repository\bin\Debug\net6.0\SHJ.BaseFramework.Repository.dll
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.Repository\bin\Debug\net6.0\SHJ.BaseFramework.Repository.pdb
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.Repository\obj\Debug\net6.0\SHJ.BaseFramework.Repository.csproj.AssemblyReference.cache
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.Repository\obj\Debug\net6.0\SHJ.BaseFramework.Repository.GeneratedMSBuildEditorConfig.editorconfig
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.Repository\obj\Debug\net6.0\SHJ.BaseFramework.Repository.AssemblyInfoInputs.cache
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.Repository\obj\Debug\net6.0\SHJ.BaseFramework.Repository.AssemblyInfo.cs
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.Repository\obj\Debug\net6.0\SHJ.BaseFramework.Repository.csproj.CoreCompileInputs.cache
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.Repository\obj\Debug\net6.0\SHJ.BaseFramework.Repository.dll
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.Repository\obj\Debug\net6.0\refint\SHJ.BaseFramework.Repository.dll
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.Repository\obj\Debug\net6.0\SHJ.BaseFramework.Repository.pdb
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.Repository\obj\Debug\net6.0\ref\SHJ.BaseFramework.Repository.dll

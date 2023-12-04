@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "SHJ.BaseFramework.Shared/1.0.0": {
+        "runtime": {
+          "SHJ.BaseFramework.Shared.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SHJ.BaseFramework.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
