@@ -1,6 +1,6 @@
 ﻿#Setting up workflow for nuget (continuous deployment)
 
-name: "Release to Nuget Baseframework (Automatic Versioning) 📄🛠️🚀📦💾🌐"
+# name: "Release to Nuget Baseframework (Automatic Versioning) 📄🛠️🚀📦💾🌐"
 
 
 name: Build
