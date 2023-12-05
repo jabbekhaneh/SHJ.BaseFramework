@@ -46,7 +46,10 @@ jobs:
       if: ${{ success() && !github.base_ref }}
       run: |
         dotnet pack src/SHJ.BaseFramework.Domain/SHJ.BaseFramework.Domain.csproj --no-build --verbosity normal -c Release -o artifacts/ && \
-        dotnet pack srcSHJ.BaseFramework.Repository/SHJ.BaseFramework.Repository.csproj --no-build --verbosity normal -c Release -o artifacts/
+        dotnet pack src/SHJ.BaseFramework.Shared/SHJ.BaseFramework.Shared.csproj --no-build --verbosity normal -c Release -o artifacts/ && \
+        dotnet pack src/SHJ.BaseFramework.Repository/SHJ.BaseFramework.Repository.csproj --no-build --verbosity normal -c Release -o artifacts/ && \
+        dotnet pack src/SHJ.BaseFramework.Dapper/SHJ.BaseFramework.Dapper.csproj --no-build --verbosity normal -c Release -o artifacts/ && \
+        dotnet pack src/SHJ.BaseFramework.EntityFrameworkCore/SHJ.BaseFramework.EntityFrameworkCore.csproj --no-build --verbosity normal -c Release -o artifacts/
 
     - name: Push to NuGet
       if: ${{ success() && !github.base_ref }}

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "0HHtEc+x+tjCftyVYPzJZn1VCQbQGraW9Qlbz4sDxhUmZYiwoWO2D8O6stxGCItOcY8HyRzBKlgChWXZPLByCw==",
+  "dgSpecHash": "WAjz8blzNd3BopcM0nR9VSXE86p/+iXCVpRWrAVctpC1fHLep+dMSH/xcPh8Q2PGl2Dl6/vKVTvhiwPtTx3E5g==",
   "success": true,
   "projectFilePath": "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Dapper\\SHJ.BaseFramework.Dapper.csproj",
   "expectedPackageFiles": [
@@ -28,8 +28,6 @@
     "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\shj.baseframework.repository\\0.0.0.1\\shj.baseframework.repository.0.0.0.1.nupkg.sha512",
-    "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\shj.baseframework.shared\\0.0.0.1\\shj.baseframework.shared.0.0.0.1.nupkg.sha512",
     "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.6\\sqlitepclraw.bundle_e_sqlite3.2.0.6.nupkg.sha512",
     "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\sqlitepclraw.core\\2.0.6\\sqlitepclraw.core.2.0.6.nupkg.sha512",
     "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.6\\sqlitepclraw.lib.e_sqlite3.2.0.6.nupkg.sha512",

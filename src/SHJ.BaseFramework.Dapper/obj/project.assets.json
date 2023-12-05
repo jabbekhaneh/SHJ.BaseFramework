@@ -377,24 +377,6 @@
           }
         }
       },
-      "SHJ.BaseFramework.Repository/0.0.0.1": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/SHJ.BaseFramework.Repository.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/SHJ.BaseFramework.Repository.dll": {}
-        }
-      },
-      "SHJ.BaseFramework.Shared/0.0.0.1": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/SHJ.BaseFramework.Shared.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/SHJ.BaseFramework.Shared.dll": {}
-        }
-      },
       "SQLitePCLRaw.bundle_e_sqlite3/2.0.6": {
         "type": "package",
         "dependencies": {
@@ -693,6 +675,26 @@
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "SHJ.BaseFramework.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/SHJ.BaseFramework.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SHJ.BaseFramework.Repository.dll": {}
+        }
+      },
+      "SHJ.BaseFramework.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/SHJ.BaseFramework.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SHJ.BaseFramework.Shared.dll": {}
         }
       }
     }
@@ -1225,28 +1227,6 @@
         "version.txt"
       ]
     },
-    "SHJ.BaseFramework.Repository/0.0.0.1": {
-      "sha512": "iAY7WGfaL1Kqx9IHm5JFueNc7mDErXvM0mq6l/EJiKtPMWlYwdlbaKklZozgImnRkKmSt9NaTLaZsZtVRtbwUQ==",
-      "type": "package",
-      "path": "shj.baseframework.repository/0.0.0.1",
-      "files": [
-        ".nupkg.metadata",
-        "lib/net6.0/SHJ.BaseFramework.Repository.dll",
-        "shj.baseframework.repository.0.0.0.1.nupkg.sha512",
-        "shj.baseframework.repository.nuspec"
-      ]
-    },
-    "SHJ.BaseFramework.Shared/0.0.0.1": {
-      "sha512": "j5VyrsDfCc/MusvSw3vVB0F94flECC3E59yyCz8sn1U7/8QZpwPAwxupP9ZiCow0egWKmbhbx3/Y+g2Gf8Dk+Q==",
-      "type": "package",
-      "path": "shj.baseframework.shared/0.0.0.1",
-      "files": [
-        ".nupkg.metadata",
-        "lib/net6.0/SHJ.BaseFramework.Shared.dll",
-        "shj.baseframework.shared.0.0.0.1.nupkg.sha512",
-        "shj.baseframework.shared.nuspec"
-      ]
-    },
     "SQLitePCLRaw.bundle_e_sqlite3/2.0.6": {
       "sha512": "zssYqiaucyGArZfg74rJuzK0ewgZiidsRVrZTmP7JLNvK806gXg6PGA46XzoJGpNPPA5uRcumwvVp6YTYxtQ5w==",
       "type": "package",
@@ -1714,6 +1694,16 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "SHJ.BaseFramework.Repository/1.0.0": {
+      "type": "project",
+      "path": "../SHJ.BaseFramework.Repository/SHJ.BaseFramework.Repository.csproj",
+      "msbuildProject": "../SHJ.BaseFramework.Repository/SHJ.BaseFramework.Repository.csproj"
+    },
+    "SHJ.BaseFramework.Shared/1.0.0": {
+      "type": "project",
+      "path": "../SHJ.BaseFramework.Shared/SHJ.BaseFramework.Shared.csproj",
+      "msbuildProject": "../SHJ.BaseFramework.Shared/SHJ.BaseFramework.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1721,8 +1711,8 @@
       "Dapper >= 2.0.123",
       "Microsoft.EntityFrameworkCore.Sqlite >= 6.0.0",
       "Microsoft.Extensions.Options >= 8.0.0",
-      "SHJ.BaseFramework.Repository >= 0.0.0.1",
-      "SHJ.BaseFramework.Shared >= 0.0.0.1",
+      "SHJ.BaseFramework.Repository >= 1.0.0",
+      "SHJ.BaseFramework.Shared >= 1.0.0",
       "System.Data.SqlClient >= 4.8.3"
     ]
   },
@@ -1759,7 +1749,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Repository\\SHJ.BaseFramework.Repository.csproj": {
+              "projectPath": "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Repository\\SHJ.BaseFramework.Repository.csproj"
+            },
+            "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Shared\\SHJ.BaseFramework.Shared.csproj": {
+              "projectPath": "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Shared\\SHJ.BaseFramework.Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -1783,14 +1780,6 @@
           "Microsoft.Extensions.Options": {
             "target": "Package",
             "version": "[8.0.0, )"
-          },
-          "SHJ.BaseFramework.Repository": {
-            "target": "Package",
-            "version": "[0.0.0.1, )"
-          },
-          "SHJ.BaseFramework.Shared": {
-            "target": "Package",
-            "version": "[0.0.0.1, )"
           },
           "System.Data.SqlClient": {
             "target": "Package",
