@@ -10,3 +10,8 @@ E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.Dapper\obj\Debug\net6.0\SHJ
 E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.Dapper\obj\Debug\net6.0\refint\SHJ.BaseFramework.Dapper.dll
 E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.Dapper\obj\Debug\net6.0\SHJ.BaseFramework.Dapper.pdb
 E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.Dapper\obj\Debug\net6.0\ref\SHJ.BaseFramework.Dapper.dll
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.Dapper\bin\Debug\net6.0\SHJ.BaseFramework.Repository.dll
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.Dapper\bin\Debug\net6.0\SHJ.BaseFramework.Shared.dll
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.Dapper\bin\Debug\net6.0\SHJ.BaseFramework.Repository.pdb
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.Dapper\bin\Debug\net6.0\SHJ.BaseFramework.Shared.pdb
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.Dapper\obj\Debug\net6.0\SHJ.BaseFramework.Dapper.csproj.CopyComplete

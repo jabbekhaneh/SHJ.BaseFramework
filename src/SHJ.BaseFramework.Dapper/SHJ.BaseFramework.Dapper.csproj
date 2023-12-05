@@ -24,5 +24,10 @@
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\SHJ.BaseFramework.Repository\SHJ.BaseFramework.Repository.csproj" />
+	  <ProjectReference Include="..\SHJ.BaseFramework.Shared\SHJ.BaseFramework.Shared.csproj" />
+	</ItemGroup>
+
 
 </Project>

@@ -1,0 +1,17 @@
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\bin\Release\net6.0\SHJ.BaseFramework.EntityFrameworkCore.deps.json
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\bin\Release\net6.0\SHJ.BaseFramework.EntityFrameworkCore.dll
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\bin\Release\net6.0\SHJ.BaseFramework.EntityFrameworkCore.pdb
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\bin\Release\net6.0\SHJ.BaseFramework.Domain.dll
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\bin\Release\net6.0\SHJ.BaseFramework.Repository.dll
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\bin\Release\net6.0\SHJ.BaseFramework.Domain.pdb
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\bin\Release\net6.0\SHJ.BaseFramework.Repository.pdb
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\obj\Release\net6.0\SHJ.BaseFramework.EntityFrameworkCore.csproj.AssemblyReference.cache
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\obj\Release\net6.0\SHJ.BaseFramework.EntityFrameworkCore.GeneratedMSBuildEditorConfig.editorconfig
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\obj\Release\net6.0\SHJ.BaseFramework.EntityFrameworkCore.AssemblyInfoInputs.cache
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\obj\Release\net6.0\SHJ.BaseFramework.EntityFrameworkCore.AssemblyInfo.cs
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\obj\Release\net6.0\SHJ.BaseFramework.EntityFrameworkCore.csproj.CoreCompileInputs.cache
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\obj\Release\net6.0\SHJ.BaseFramework.EntityFrameworkCore.csproj.CopyComplete
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\obj\Release\net6.0\SHJ.BaseFramework.EntityFrameworkCore.dll
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\obj\Release\net6.0\refint\SHJ.BaseFramework.EntityFrameworkCore.dll
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\obj\Release\net6.0\SHJ.BaseFramework.EntityFrameworkCore.pdb
+E:\mygit\SHJ\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\obj\Release\net6.0\ref\SHJ.BaseFramework.EntityFrameworkCore.dll
