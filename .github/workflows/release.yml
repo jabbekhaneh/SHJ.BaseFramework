@@ -6,7 +6,7 @@ on:
        - "v*"
 
 jobs:
-  build:
+  Deploy:
 
     runs-on: ubuntu-latest
 
