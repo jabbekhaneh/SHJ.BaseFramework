@@ -1,12 +1,21 @@
 ﻿name: Build 📄🛠️🚀📦💾🌐
 
 on:
+  workflow_dispatch:
   push:
-    tags:
-       - "v*"
+    branches: [ main, release/v** ]
+    paths-ignore:
+      - 'README.md'
+      - 'LICENSE'
+      - 'img/**'
+      - 'benchmarks/**'
+      - 'samples/**'
+      - '*.sln'
+  pull_request:
+    branches: [ main ]
 
 jobs:
-  Deploy:
+  build:
 
     runs-on: ubuntu-latest
 
