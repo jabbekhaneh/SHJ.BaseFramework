@@ -3,19 +3,11 @@
 on:
   workflow_dispatch:
   push:
-    branches: [ main, release/v** ]
-    paths-ignore:
-      - 'README.md'
-      - 'LICENSE'
-      - 'img/**'
-      - 'benchmarks/**'
-      - 'samples/**'
-      - '*.sln'
-  pull_request:
-    branches: [ main ]
+    tags:
+       - "v*"
 
 jobs:
-  build:
+  deploy:
 
     runs-on: ubuntu-latest
 
