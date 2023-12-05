@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<PackageIcon>logo.png</PackageIcon>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\..\assets\logo\logo.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\SHJ.BaseFramework.Domain\SHJ.BaseFramework.Domain.csproj" />
+		<ProjectReference Include="..\SHJ.BaseFramework.Shared\SHJ.BaseFramework.Shared.csproj" />
+	</ItemGroup>
+
+</Project>

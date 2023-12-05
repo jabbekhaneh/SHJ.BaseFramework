@@ -1,18 +1,9 @@
-﻿name: Build
+﻿name: Build 📄🛠️🚀📦💾🌐
 
 on:
-  workflow_dispatch:
   push:
-    branches: [ main, release/v** ]
-    paths-ignore:
-      - 'README.md'
-      - 'LICENSE'
-      - 'img/**'
-      - 'benchmarks/**'
-      - 'samples/**'
-      - '*.sln'
-  pull_request:
-    branches: [ main ]
+    tags:
+       - "v*"
 
 jobs:
   build:
@@ -20,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: '📄Checkout'
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0 # depth is needed for nbgv
@@ -27,13 +19,13 @@ jobs:
       with:
         setAllVars: true
 
-    - name: Setup .NET
+    - name: 🛠️Setup .NET
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '6.0.x'
         include-prerelease: true
 
-    - name: Restore dependencies
+    - name: 🚀Restore dependencies
       run: dotnet restore Build.csproj
 
     - name: Build
@@ -42,15 +34,18 @@ jobs:
     # - name: Test
     #   run: dotnet test Build.csproj --no-build --verbosity normal -c Release -f net6.0
 
-    - name: Pack
+    - name: 📦Pack
       if: ${{ success() && !github.base_ref }}
       run: |
         dotnet pack src/SHJ.BaseFramework.Domain/SHJ.BaseFramework.Domain.csproj --no-build --verbosity normal -c Release -o artifacts/ && \
         dotnet pack src/SHJ.BaseFramework.Shared/SHJ.BaseFramework.Shared.csproj --no-build --verbosity normal -c Release -o artifacts/ && \
         dotnet pack src/SHJ.BaseFramework.Repository/SHJ.BaseFramework.Repository.csproj --no-build --verbosity normal -c Release -o artifacts/ && \
         dotnet pack src/SHJ.BaseFramework.Dapper/SHJ.BaseFramework.Dapper.csproj --no-build --verbosity normal -c Release -o artifacts/ && \
-        dotnet pack src/SHJ.BaseFramework.EntityFrameworkCore/SHJ.BaseFramework.EntityFrameworkCore.csproj --no-build --verbosity normal -c Release -o artifacts/
+        dotnet pack src/SHJ.BaseFramework.EntityFrameworkCore/SHJ.BaseFramework.EntityFrameworkCore.csproj --no-build --verbosity normal -c Release -o artifacts/ && \
+        dotnet pack src/SHJ.BaseFramework.AspNet/SHJ.BaseFramework.AspNet.csproj --no-build --verbosity normal -c Release -o artifacts/
 
-    - name: Push to NuGet
+        
+
+    - name: 🌐Push to NuGet
       if: ${{ success() && !github.base_ref }}
       run: dotnet nuget push artifacts/**.nupkg -k ${{secrets.NUGET_API_KEY}} -s https://api.nuget.org/v3/index.json 
