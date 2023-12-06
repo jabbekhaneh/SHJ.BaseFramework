@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Dapper\\SHJ.BaseFramework.Dapper.csproj": {}
+    "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Dapper\\SHJ.BaseFramework.Dapper.csproj": {}
   },
   "projects": {
-    "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Dapper\\SHJ.BaseFramework.Dapper.csproj": {
+    "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Dapper\\SHJ.BaseFramework.Dapper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Dapper\\SHJ.BaseFramework.Dapper.csproj",
+        "projectUniqueName": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Dapper\\SHJ.BaseFramework.Dapper.csproj",
         "projectName": "SHJ.BaseFramework.Dapper",
-        "projectPath": "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Dapper\\SHJ.BaseFramework.Dapper.csproj",
+        "projectPath": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Dapper\\SHJ.BaseFramework.Dapper.csproj",
         "packagesPath": "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\",
-        "outputPath": "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Dapper\\obj\\",
+        "outputPath": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Dapper\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -34,11 +34,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Repository\\SHJ.BaseFramework.Repository.csproj": {
-                "projectPath": "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Repository\\SHJ.BaseFramework.Repository.csproj"
+              "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Repository\\SHJ.BaseFramework.Repository.csproj": {
+                "projectPath": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Repository\\SHJ.BaseFramework.Repository.csproj"
               },
-              "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Shared\\SHJ.BaseFramework.Shared.csproj": {
-                "projectPath": "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Shared\\SHJ.BaseFramework.Shared.csproj"
+              "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Shared\\SHJ.BaseFramework.Shared.csproj": {
+                "projectPath": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Shared\\SHJ.BaseFramework.Shared.csproj"
               }
             }
           }
@@ -90,14 +90,14 @@
         }
       }
     },
-    "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Repository\\SHJ.BaseFramework.Repository.csproj": {
+    "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Repository\\SHJ.BaseFramework.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Repository\\SHJ.BaseFramework.Repository.csproj",
+        "projectUniqueName": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Repository\\SHJ.BaseFramework.Repository.csproj",
         "projectName": "SHJ.BaseFramework.Repository",
-        "projectPath": "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Repository\\SHJ.BaseFramework.Repository.csproj",
+        "projectPath": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Repository\\SHJ.BaseFramework.Repository.csproj",
         "packagesPath": "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\",
-        "outputPath": "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Repository\\obj\\",
+        "outputPath": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -151,14 +151,14 @@
         }
       }
     },
-    "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Shared\\SHJ.BaseFramework.Shared.csproj": {
+    "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Shared\\SHJ.BaseFramework.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Shared\\SHJ.BaseFramework.Shared.csproj",
+        "projectUniqueName": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Shared\\SHJ.BaseFramework.Shared.csproj",
         "projectName": "SHJ.BaseFramework.Shared",
-        "projectPath": "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Shared\\SHJ.BaseFramework.Shared.csproj",
+        "projectPath": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Shared\\SHJ.BaseFramework.Shared.csproj",
         "packagesPath": "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\",
-        "outputPath": "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Shared\\obj\\",
+        "outputPath": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

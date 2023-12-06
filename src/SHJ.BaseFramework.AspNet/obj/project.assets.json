@@ -975,11 +975,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.AspNet\\SHJ.BaseFramework.AspNet.csproj",
+      "projectUniqueName": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.AspNet\\SHJ.BaseFramework.AspNet.csproj",
       "projectName": "SHJ.BaseFramework.AspNet",
-      "projectPath": "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.AspNet\\SHJ.BaseFramework.AspNet.csproj",
+      "projectPath": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.AspNet\\SHJ.BaseFramework.AspNet.csproj",
       "packagesPath": "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\",
-      "outputPath": "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.AspNet\\obj\\",
+      "outputPath": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.AspNet\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1002,11 +1002,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Domain\\SHJ.BaseFramework.Domain.csproj": {
-              "projectPath": "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Domain\\SHJ.BaseFramework.Domain.csproj"
+            "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Domain\\SHJ.BaseFramework.Domain.csproj": {
+              "projectPath": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Domain\\SHJ.BaseFramework.Domain.csproj"
             },
-            "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Shared\\SHJ.BaseFramework.Shared.csproj": {
-              "projectPath": "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Shared\\SHJ.BaseFramework.Shared.csproj"
+            "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Shared\\SHJ.BaseFramework.Shared.csproj": {
+              "projectPath": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Shared\\SHJ.BaseFramework.Shared.csproj"
             }
           }
         }

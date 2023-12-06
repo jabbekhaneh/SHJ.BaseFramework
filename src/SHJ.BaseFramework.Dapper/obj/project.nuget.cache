@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WAjz8blzNd3BopcM0nR9VSXE86p/+iXCVpRWrAVctpC1fHLep+dMSH/xcPh8Q2PGl2Dl6/vKVTvhiwPtTx3E5g==",
+  "dgSpecHash": "+bCagDxpUveK6G8JxBY60NFApYo9LLpuCli5Lfr22F+jVAFvXCKQRhj9xCZN06DpEtDYcxXFHAYJ08zN5fYDQw==",
   "success": true,
-  "projectFilePath": "E:\\mygit\\SHJ\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Dapper\\SHJ.BaseFramework.Dapper.csproj",
+  "projectFilePath": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Dapper\\SHJ.BaseFramework.Dapper.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.0\\microsoft.data.sqlite.core.6.0.0.nupkg.sha512",
@@ -41,7 +41,9 @@
     "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
-    "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
+    "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
+    "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\shj.baseframework.repository\\1.0.0\\shj.baseframework.repository.1.0.0.nupkg.sha512",
+    "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\shj.baseframework.shared\\1.0.0\\shj.baseframework.shared.1.0.0.nupkg.sha512"
   ],
   "logs": []
 }
