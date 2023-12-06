@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>SHJ.BaseFramework.EntityFrameworkCore</id>
+    <version>1.0.5</version>
+    <authors>SHJ.BaseFramework.EntityFrameworkCore</authors>
+    <icon>logo.png</icon>
+    <projectUrl>https://github.com/jabbekhaneh/SHJ.BaseArchitecture</projectUrl>
+    <description>For Asp net Architect</description>
+    <repository url="https://github.com/jabbekhaneh/SHJ.BaseFramework" />
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="SHJ.BaseFramework.Domain" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="SHJ.BaseFramework.Repository" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="SHJ.BaseFramework.Shared" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore" version="6.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore.InMemory" version="6.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore.SqlServer" version="6.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore.Tools" version="6.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\bin\Debug\net6.0\SHJ.BaseFramework.EntityFrameworkCore.runtimeconfig.json" target="lib\net6.0\SHJ.BaseFramework.EntityFrameworkCore.runtimeconfig.json" />
+    <file src="E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\bin\Debug\net6.0\SHJ.BaseFramework.EntityFrameworkCore.dll" target="lib\net6.0\SHJ.BaseFramework.EntityFrameworkCore.dll" />
+    <file src="E:\mygit\SHJ.BaseFramework\assets\logo\logo.png" target="\logo.png" />
+  </files>
+</package>

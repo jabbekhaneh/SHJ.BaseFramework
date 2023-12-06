@@ -7,8 +7,7 @@ namespace SHJ.BaseFramework.AspNet;
 
 public static class SHJBaseFrameworkAspNetDependency
 {
-
-    public static IServiceCollection AddSHJBaseFrameworkAspNet(IServiceCollection services)
+    public static IServiceCollection AddSHJBaseFrameworkAspNet(this IServiceCollection services)
     {
         services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
         services.AddScoped<BaseClaimService, ClaimService>();

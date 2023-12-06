@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
+using Microsoft.EntityFrameworkCore.SqlServer.Infrastructure.Internal;
 using Microsoft.Extensions.Options;
 using SHJ.BaseFramework.Domain;
 using SHJ.BaseFramework.Shared;
@@ -10,58 +11,25 @@ namespace SHJ.BaseFramework.EntityFrameworkCore;
 public abstract class BaseDbContext<TDbContext> : DbContext
      where TDbContext : DbContext
 {
-    protected IOptions<BaseOptions> Options;
-    protected BaseClaimService _claimService;
-    public BaseDbContext(BaseClaimService claimService, IOptions<BaseOptions> options)
-    {
-        _claimService = claimService;
-        Options = options;
-    }
+   
     protected BaseDbContext(DbContextOptions<TDbContext> options)
-       : base(options)
+        : base(options)
     {
-
     }
-
-    protected override void OnModelCreating(ModelBuilder builder)
+    protected static DbContextOptions<T> ChangeOptionsType<T>(DbContextOptions options) where T : DbContext
     {
-        builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-        base.OnModelCreating(builder);
+        var sqlExt = options.Extensions.FirstOrDefault(e => e is SqlServerOptionsExtension);
+
+        if (sqlExt == null)
+            throw (new Exception("Failed to retrieve SQL connection string for base Context"));
+
+        return new DbContextOptionsBuilder<T>()
+                    .UseSqlServer(((SqlServerOptionsExtension)sqlExt).ConnectionString)
+                    .Options;
     }
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        if (Options.Value.UseInMemoryDatabase)
-        {
-            optionsBuilder.UseInMemoryDatabase("dbInMemory");
-            optionsBuilder.ConfigureWarnings(x => x.Ignore(InMemoryEventId.TransactionIgnoredWarning));
-        }
-        else
-        {
-            optionsBuilder.UseSqlServer(Options.Value.ConnectionString);
-        }
-
-        base.OnConfiguring(optionsBuilder);
-    }
-
-    public new async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new())
-    {
-        if (_claimService.IsAuthenticated())
-        {
-            foreach (var entry in ChangeTracker.Entries<BaseEntity>())
-                switch (entry.State)
-                {
-                    case EntityState.Added:
-                        entry.Entity.CreateOn(_claimService.GetUserId());
-                        break;
-                    case EntityState.Modified:
-                        entry.Entity.UpdateOn(_claimService.GetUserId());
-                        break;
-                }
-        }
-
-        return await base.SaveChangesAsync(cancellationToken);
-    }
+    
 
 
 }
+
+

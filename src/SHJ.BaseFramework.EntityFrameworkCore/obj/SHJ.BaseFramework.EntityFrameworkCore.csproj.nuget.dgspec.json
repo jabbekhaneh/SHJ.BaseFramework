@@ -66,7 +66,7 @@
       }
     },
     "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.EntityFrameworkCore\\SHJ.BaseFramework.EntityFrameworkCore.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.13",
       "restore": {
         "projectUniqueName": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.EntityFrameworkCore\\SHJ.BaseFramework.EntityFrameworkCore.csproj",
         "projectName": "SHJ.BaseFramework.EntityFrameworkCore",
@@ -132,6 +132,10 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             }
           },
           "imports": [
