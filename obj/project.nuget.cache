@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+HK6mHcJOSQtHiJxdoRR/Uo4qm7HQj1ScQObxtzkC+4cq2fXfvHdWiIcpW1ZY9IC59W4N57meLUoZ1CFQQE6ZA==",
+  "dgSpecHash": "Wn7wS2oEuYAY8vMPlYMqblQusQFLkPZ3S6Tx04/062Fk3P54bnNQzHBcDpE0QtXj9crshBjIBNn4wsunMkTLCg==",
   "success": true,
-  "projectFilePath": "E:\\mygit\\SHJ\\SHJ.BaseFramework\\Build.csproj",
+  "projectFilePath": "E:\\mygit\\SHJ.BaseFramework\\build.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

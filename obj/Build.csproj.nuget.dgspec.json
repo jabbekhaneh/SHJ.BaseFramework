@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\mygit\\SHJ\\SHJ.BaseFramework\\Build.csproj": {}
+    "E:\\mygit\\SHJ.BaseFramework\\build.csproj": {}
   },
   "projects": {
-    "E:\\mygit\\SHJ\\SHJ.BaseFramework\\Build.csproj": {
+    "E:\\mygit\\SHJ.BaseFramework\\build.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\mygit\\SHJ\\SHJ.BaseFramework\\Build.csproj",
-        "projectName": "Build",
-        "projectPath": "E:\\mygit\\SHJ\\SHJ.BaseFramework\\Build.csproj",
+        "projectUniqueName": "E:\\mygit\\SHJ.BaseFramework\\build.csproj",
+        "projectName": "build",
+        "projectPath": "E:\\mygit\\SHJ.BaseFramework\\build.csproj",
         "packagesPath": "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\",
-        "outputPath": "E:\\mygit\\SHJ\\SHJ.BaseFramework\\obj\\",
+        "outputPath": "E:\\mygit\\SHJ.BaseFramework\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
