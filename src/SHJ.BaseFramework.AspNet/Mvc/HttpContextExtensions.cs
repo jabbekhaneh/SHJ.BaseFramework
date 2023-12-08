@@ -29,7 +29,10 @@ public static class HttpContextExtensions
         return new BaseHttpContextInfo(httpContext.GetTenantId(),
             httpContext.GetBaseLocalIpAddress(), httpContext.GetBaseIpAddress());
     }
-        
-    
+    public static BaseOptions GetValueBaseOptions(this IConfiguration configuration)
+    {
+        return configuration.GetSection("Options").Get<BaseOptions>();
+    }
+
 }
 

@@ -1,5 +1,4 @@
 ﻿using Dapper;
-using Microsoft.Data.Sqlite;
 using System.Data.SqlClient;
 using Microsoft.Extensions.Options;
 using SHJ.BaseFramework.Repository;
@@ -17,23 +16,26 @@ public class BaseDapperSqlServerData<TEntity> : BaseQueryRepository<TEntity>
     public BaseDapperSqlServerData(IOptions<BaseOptions> options)
     {
         Options = options;
-        if (options.Value.UseInMemoryDatabase)
-            SetOptionInMemory(options);
-        else
-            SetOption(options);
+        SetOption(options);
     }
 
     private void SetOption(IOptions<BaseOptions> options)
     {
         if (string.IsNullOrEmpty(options.Value.ConnectionString))
             throw new ArgumentNullException($"{nameof(options.Value.ConnectionString)}");
-        Connection = new SqlConnection(options.Value.ConnectionString);
+
+        switch (options.Value.DatabaseType)
+        {
+            case DatabaseType.MsSql:
+                Connection = new SqlConnection(options.Value.ConnectionString);
+                break;
+            case DatabaseType.TestContainer:
+                Connection = new SqlConnection(options.Value.ConnectionStringTestContainer);
+                break;
+        }
+        
     }
-    private void SetOptionInMemory(IOptions<BaseOptions> options)
-    {
-        var connectionInMemory = new SqliteConnection(options.Value.InMemoryDatabaseConnection);
-        Connection = connectionInMemory;
-    }
+    
 
     /// <summary>
     /// Get All Entities

@@ -1,10 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.EntityFrameworkCore.SqlServer.Infrastructure.Internal;
-using Microsoft.Extensions.Options;
-using SHJ.BaseFramework.Domain;
-using SHJ.BaseFramework.Shared;
-using System.Reflection;
 
 namespace SHJ.BaseFramework.EntityFrameworkCore;
 
@@ -27,9 +22,16 @@ public abstract class BaseDbContext<TDbContext> : DbContext
                     .UseSqlServer(((SqlServerOptionsExtension)sqlExt).ConnectionString)
                     .Options;
     }
-    
 
+    public override Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = default)
+    {
+        return base.SaveChangesAsync(acceptAllChangesOnSuccess, cancellationToken);
+    }
 
+    public override int SaveChanges(bool acceptAllChangesOnSuccess)
+    {
+        return base.SaveChanges(acceptAllChangesOnSuccess);
+    }
 }
 
 
