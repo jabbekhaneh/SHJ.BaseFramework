@@ -4,12 +4,11 @@ public class BaseOptions
 {
     public BaseOptions()
     {
-        if (string.IsNullOrEmpty(UserID))
-            ConnectionString = $"data source ={DataSource}; initial catalog ={DatabaseName}; integrated security = {IntegratedSecurity}; MultipleActiveResultSets={MultipleActiveResultSets}";
-        else
-            ConnectionString = $@"Data Source={DataSource} ;Initial Catalog={DatabaseName};Persist Security Info=True;MultipleActiveResultSets=True;User ID={UserID};Password={Password}";
     }
-    public string ConnectionString { get; private set; } = string.Empty;
+    public string ConnectionString { get { return GetConnectionString(); }  }
+    /// <summary>
+    /// The amount of DatabaseType should be equal to DbTest
+    /// </summary>
     public string DefualtConnectionString { get; set; } = string.Empty;
     public string DatabaseName { get; set; } = string.Empty;
     public string SchemaName { get; set; } = "dbo";
@@ -21,6 +20,15 @@ public class BaseOptions
     public string Password { get; set; } = string.Empty;
     public string InMemoryDatabaseConnection { get; private set; } = @"Data Source=app.db";
 
+
+    private string GetConnectionString()
+    {
+        if (string.IsNullOrEmpty(UserID))
+             return $"data source ={DataSource}; initial catalog ={DatabaseName}; integrated security = {IntegratedSecurity}; MultipleActiveResultSets={MultipleActiveResultSets}";
+        else
+            return  $@"Data Source={DataSource} ;Initial Catalog={DatabaseName};Persist Security Info=True;MultipleActiveResultSets=True;User ID={UserID};Password={Password}";
+        
+    }
 }
 public enum DatabaseType : byte
 {
