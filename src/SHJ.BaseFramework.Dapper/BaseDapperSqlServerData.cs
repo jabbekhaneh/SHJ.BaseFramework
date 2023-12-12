@@ -29,8 +29,8 @@ public class BaseDapperSqlServerData<TEntity> : BaseQueryRepository<TEntity>
             case DatabaseType.MsSql:
                 Connection = new SqlConnection(options.Value.ConnectionString);
                 break;
-            case DatabaseType.TestContainer:
-                Connection = new SqlConnection(options.Value.ConnectionStringTestContainer);
+            case DatabaseType.DbTest:
+                Connection = new SqlConnection(options.Value.DefualtConnectionString);
                 break;
         }
         

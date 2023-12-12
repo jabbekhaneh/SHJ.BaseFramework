@@ -1,6 +1,5 @@
 ﻿namespace SHJ.BaseFramework.Shared;
 
-
 public interface BaseClaimService
 {
     string GetUserId();

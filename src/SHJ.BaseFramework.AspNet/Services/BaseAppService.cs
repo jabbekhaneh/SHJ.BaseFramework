@@ -30,7 +30,7 @@ public abstract class BaseAppService<TEntity>  : BaseApiController where TEntity
         _result.IsValid();
         return _result;
     }
-    protected virtual void ThrowException(int status,string? message)
+    protected virtual BaseException ThrowException(int status,string? message)
     {
         throw new BaseException(status,message);
     }
