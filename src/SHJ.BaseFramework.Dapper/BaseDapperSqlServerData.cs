@@ -21,6 +21,8 @@ public class BaseDapperSqlServerData<TEntity> : BaseQueryRepository<TEntity>
 
     private void SetOption(IOptions<BaseOptions> options)
     {
+        options.Value.ConnectionString = ConnectionString();
+
         if (string.IsNullOrEmpty(options.Value.ConnectionString))
             throw new ArgumentNullException($"{nameof(options.Value.ConnectionString)}");
 
@@ -29,13 +31,13 @@ public class BaseDapperSqlServerData<TEntity> : BaseQueryRepository<TEntity>
             case DatabaseType.MsSql:
                 Connection = new SqlConnection(options.Value.ConnectionString);
                 break;
-            case DatabaseType.DbTest:
-                Connection = new SqlConnection(options.Value.DefualtConnectionString);
+            case DatabaseType.Manual:
+                Connection = new SqlConnection(options.Value.ManualConnectionString);
                 break;
         }
-        
+
     }
-    
+
 
     /// <summary>
     /// Get All Entities
@@ -76,5 +78,13 @@ public class BaseDapperSqlServerData<TEntity> : BaseQueryRepository<TEntity>
                 .GetProperties()
                 .Where(e => e.Name != "Id" && !e.PropertyType.GetTypeInfo().IsGenericType)
                 .Select(e => e.Name);
+    }
+
+    public string ConnectionString()
+    {
+        if (string.IsNullOrEmpty(Options.Value.UserID))
+            return $"data source ={Options.Value.DataSource};initial catalog={Options.Value.DatabaseName};integrated security={Options.Value.IntegratedSecurity}; MultipleActiveResultSets={Options.Value.MultipleActiveResultSets}";
+        else
+            return $@"Data Source={Options.Value.DataSource};Initial Catalog={Options.Value.DatabaseName};Persist Security Info=True;MultipleActiveResultSets=True;User ID={Options.Value.UserID};Password={Options.Value.Password}";
     }
 }

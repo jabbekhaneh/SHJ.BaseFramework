@@ -2,16 +2,16 @@
 
 public class BaseOptions
 {
-    public BaseOptions()
-    {
-    }
-    public string ConnectionString { get { return GetConnectionString(); }  }
     /// <summary>
-    /// The amount of DatabaseType should be equal to DbTest
+    /// It is set automatically
     /// </summary>
-    public string DefualtConnectionString { get; set; } = string.Empty;
+    public string ConnectionString { get; set; } = string.Empty;
     /// <summary>
-    /// 
+    /// It is set manual 
+    /// </summary>
+    public string ManualConnectionString { get; set; } = string.Empty;
+    /// <summary>
+    /// It is set automatically provided that DatabaseType is manual 
     /// </summary>
     public string DatabaseName { get; set; } = string.Empty;
     /// <summary>
@@ -46,17 +46,15 @@ public class BaseOptions
     /// 
     /// </summary>
     public string InMemoryDatabaseConnection { get; private set; } = @"Data Source=app.db";
+    /// <summary>
+    /// ASPNET CORE ENVIRONMENT
+    /// </summary>
+    public ASPNET_ENVIRONMENT Environment { get; set; }
 
 
-    private string GetConnectionString()
-    {
-        if (string.IsNullOrEmpty(UserID))
-             return $"data source ={DataSource};initial catalog={DatabaseName};integrated security={IntegratedSecurity}; MultipleActiveResultSets={MultipleActiveResultSets}";
-        else
-            return  $@"Data Source={DataSource};Initial Catalog={DatabaseName};Persist Security Info=True;MultipleActiveResultSets=True;User ID={UserID};Password={Password}";
-    }
+
 }
-public enum DatabaseType : byte
+public enum DatabaseType
 {
     MsSql,
     Oracle,
@@ -65,5 +63,10 @@ public enum DatabaseType : byte
     InMemory,
     Cosmos,
     Firebird,
-    DbTest,
+    Manual,
+}
+public enum ASPNET_ENVIRONMENT
+{
+    Development,
+    Production,
 }
