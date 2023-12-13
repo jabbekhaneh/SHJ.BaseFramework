@@ -33,6 +33,10 @@ public static class HttpContextExtensions
     {
         return configuration.GetSection("Options").Get<BaseOptions>();
     }
-
+    public static BaseSqlServerOptions GetValueBaseSqlOptions(this IConfiguration configuration)
+    {
+        return configuration.GetSection("SqlOptions").Get<BaseSqlServerOptions>();
+    }
+    
 }
 

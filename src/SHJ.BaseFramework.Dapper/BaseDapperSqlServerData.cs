@@ -21,19 +21,21 @@ public class BaseDapperSqlServerData<TEntity> : BaseQueryRepository<TEntity>
 
     private void SetOption(IOptions<BaseOptions> options)
     {
-        options.Value.ConnectionString = ConnectionString();
+        string connectionString = ConnectionString();
 
-        if (string.IsNullOrEmpty(options.Value.ConnectionString))
-            throw new ArgumentNullException($"{nameof(options.Value.ConnectionString)}");
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("Dapper connection: " + connectionString);
+
+        if (string.IsNullOrEmpty(connectionString))
+            throw new SHJBaseFrameworkDapperException($"connectionString is null");
 
         switch (options.Value.DatabaseType)
         {
             case DatabaseType.MsSql:
-                Connection = new SqlConnection(options.Value.ConnectionString);
+                Connection = new SqlConnection(connectionString);
                 break;
-            case DatabaseType.Manual:
-                Connection = new SqlConnection(options.Value.ManualConnectionString);
-                break;
+            case DatabaseType.InMemory:
+                throw new SHJBaseFrameworkDapperException("can not use DatabaseInMemory in dapper");
         }
 
     }
@@ -57,6 +59,7 @@ public class BaseDapperSqlServerData<TEntity> : BaseQueryRepository<TEntity>
     /// <returns></returns>
     public async Task<TEntity> GetById(long id)
     {
+        Console.WriteLine("Dapper GetById: " + id);
         var query = $"select * from {typeof(TEntity).Name}s where Id=@Id";
         var entity = await Connection.QueryAsync<TEntity>(query, new { Id = id });
         return entity.SingleOrDefault();
@@ -82,9 +85,12 @@ public class BaseDapperSqlServerData<TEntity> : BaseQueryRepository<TEntity>
 
     public string ConnectionString()
     {
-        if (string.IsNullOrEmpty(Options.Value.UserID))
-            return $"data source ={Options.Value.DataSource};initial catalog={Options.Value.DatabaseName};integrated security={Options.Value.IntegratedSecurity}; MultipleActiveResultSets={Options.Value.MultipleActiveResultSets}";
-        else
-            return $@"Data Source={Options.Value.DataSource};Initial Catalog={Options.Value.DatabaseName};Persist Security Info=True;MultipleActiveResultSets=True;User ID={Options.Value.UserID};Password={Options.Value.Password}";
+        if (Options.Value.SqlOptions.ConnectToServer == DatabaseConnectType.WindowsAuthentication)
+            return $"data source ={Options.Value.SqlOptions.DataSource};initial catalog={Options.Value.SqlOptions.DatabaseName};integrated security={Options.Value.SqlOptions.IntegratedSecurity}; MultipleActiveResultSets={Options.Value.SqlOptions.MultipleActiveResultSets}";
+
+        else if (Options.Value.SqlOptions.ConnectToServer == DatabaseConnectType.SqlServerAuthentication)
+            return $@"Data Source={Options.Value.SqlOptions.DataSource};Initial Catalog={Options.Value.SqlOptions.DatabaseName};Persist Security Info=True;MultipleActiveResultSets=True;User ID={Options.Value.SqlOptions.UserID};Password={Options.Value.SqlOptions.Password}";
+
+        return string.Empty;
     }
 }
