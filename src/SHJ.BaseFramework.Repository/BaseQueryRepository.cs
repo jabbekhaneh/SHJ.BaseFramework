@@ -11,7 +11,7 @@ public interface BaseQueryRepository<TEntity>
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    Task<TEntity> GetById(long id);
+    Task<TEntity> GetById(Guid id);
     /// <summary>
     /// 
     /// </summary>

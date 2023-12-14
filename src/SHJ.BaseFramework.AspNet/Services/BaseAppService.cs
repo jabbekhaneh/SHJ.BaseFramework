@@ -2,7 +2,7 @@
 using SHJ.BaseFramework.AspNet.Mvc;
 using SHJ.BaseFramework.Domain;
 using SHJ.BaseFramework.Shared;
-using SHJ.ExceptionHandler;
+
 
 namespace SHJ.BaseFramework.AspNet.Services;
 
@@ -29,10 +29,6 @@ public abstract class BaseAppService<TEntity>  : BaseApiController where TEntity
         _result.SetStatus(BaseStatusCodes.OK);
         _result.IsValid();
         return _result;
-    }
-    protected virtual BaseException ThrowException(int status,string? message)
-    {
-        throw new BaseException(status,message);
     }
     protected void AddMessage(string message)
     {

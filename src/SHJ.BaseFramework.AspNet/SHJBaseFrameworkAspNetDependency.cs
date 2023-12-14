@@ -4,7 +4,6 @@ using Microsoft.Extensions.DependencyInjection;
 using SHJ.BaseFramework.AspNet.Attributes;
 using SHJ.BaseFramework.AspNet.Mvc;
 using SHJ.BaseFramework.Shared;
-using SHJ.ExceptionHandler;
 
 namespace SHJ.BaseFramework.AspNet;
 
@@ -25,7 +24,6 @@ public static class SHJBaseFrameworkAspNetDependency
         {
             mvc.Conventions.Add(new ControllerNameAttributeConvention());
         });
-        services.AddSHJExceptionHandler();
         return services;
     }
     /// <summary>
@@ -34,7 +32,6 @@ public static class SHJBaseFrameworkAspNetDependency
     /// <returns></returns>
     public static IApplicationBuilder UseSHJBaseFrameworkAspNet(this IApplicationBuilder app)
     {
-        app.UseSHJExceptionHandler();
         return app;
     }
 }

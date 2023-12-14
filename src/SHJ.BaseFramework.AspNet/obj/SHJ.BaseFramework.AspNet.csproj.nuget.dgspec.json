@@ -56,10 +56,6 @@
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[6.0.0, )"
-            },
-            "SHJ.ExceptionHandler": {
-              "target": "Package",
-              "version": "[1.0.0, )"
             }
           },
           "imports": [

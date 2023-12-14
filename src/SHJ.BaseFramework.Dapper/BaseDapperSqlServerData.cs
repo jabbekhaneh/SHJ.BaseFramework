@@ -57,7 +57,7 @@ public class BaseDapperSqlServerData<TEntity> : BaseQueryRepository<TEntity>
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    public async Task<TEntity> GetById(long id)
+    public async Task<TEntity> GetById(Guid id)
     {
         Console.WriteLine("Dapper GetById: " + id);
         var query = $"select * from {typeof(TEntity).Name}s where Id=@Id";
