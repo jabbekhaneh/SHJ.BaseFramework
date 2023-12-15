@@ -7,7 +7,11 @@ public class BaseOptions
     /// <summary>
     /// database config and set option all of project
     /// </summary>
-    public BaseSqlServerOptions? SqlOptions { get; set; } 
+    public BaseSqlServerOptions? SqlOptions { get; set; }
+    /// <summary>
+    /// Manual set  connectionString
+    /// </summary>
+    public string ManualConnectionString { get; set; } = string.Empty;
     /// <summary>
     /// type of database
     /// </summary>
@@ -27,6 +31,7 @@ public enum DatabaseType
     InMemory,
     Cosmos,
     Firebird,
+    Manual,
 }
 public enum ASPNET_EnvironmentType
 {

@@ -21,18 +21,14 @@ public class BaseDapperSqlServerData<TEntity> : BaseQueryRepository<TEntity>
 
     private void SetOption(IOptions<BaseOptions> options)
     {
-        string connectionString = ConnectionString();
-
-        Console.ForegroundColor = ConsoleColor.Yellow;
-        Console.WriteLine("Dapper connection: " + connectionString);
-
-        if (string.IsNullOrEmpty(connectionString))
-            throw new SHJBaseFrameworkDapperException($"connectionString is null");
-
         switch (options.Value.DatabaseType)
         {
             case DatabaseType.MsSql:
+                string connectionString = ConnectionString();
                 Connection = new SqlConnection(connectionString);
+                break;
+            case DatabaseType.Manual:
+                Connection = new SqlConnection(options.Value.ManualConnectionString);
                 break;
             case DatabaseType.InMemory:
                 throw new SHJBaseFrameworkDapperException("can not use DatabaseInMemory in dapper");
@@ -90,6 +86,7 @@ public class BaseDapperSqlServerData<TEntity> : BaseQueryRepository<TEntity>
 
         else if (Options.Value.SqlOptions.ConnectToServer == DatabaseConnectType.SqlServerAuthentication)
             return $@"Data Source={Options.Value.SqlOptions.DataSource};Initial Catalog={Options.Value.SqlOptions.DatabaseName};Persist Security Info=True;MultipleActiveResultSets=True;User ID={Options.Value.SqlOptions.UserID};Password={Options.Value.SqlOptions.Password}";
+
 
         return string.Empty;
     }
