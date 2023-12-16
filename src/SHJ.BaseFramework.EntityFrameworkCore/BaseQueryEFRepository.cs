@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 
 namespace SHJ.BaseFramework.EntityFrameworkCore;
 
-public class BaseQueryEFRepository<TDbContext, TEntity> : IBaseQueryEfRepository<TEntity>, IBaseQueryRepository<TEntity> 
+public class BaseQueryEFRepository<TDbContext, TEntity> : IBaseQueryableRepository<TEntity>, IBaseQueryRepository<TEntity> 
     where TEntity : BaseEntity where TDbContext : DbContext
 {
     protected readonly TDbContext Context;
