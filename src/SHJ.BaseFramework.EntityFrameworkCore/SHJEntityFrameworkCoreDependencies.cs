@@ -6,10 +6,10 @@ namespace SHJ.BaseFramework.EntityFrameworkCore;
 
 public static class SHJEntityFrameworkCoreDependencies
 {
-    public static IServiceCollection AddShjEntityFramework<TDbContext>(this IServiceCollection services)
+    public static IServiceCollection AddSHJEntityFramework<TDbContext>(this IServiceCollection services)
         where TDbContext : DbContext
     {
-        services.AddTransient<BaseCommandUnitOfWork, BaseEFUnitOfWork<TDbContext>>();
+        services.AddTransient<IBaseCommandUnitOfWork, BaseEFUnitOfWork<TDbContext>>();
         return services;
     }
 }

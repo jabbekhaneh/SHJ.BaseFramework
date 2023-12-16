@@ -3,7 +3,7 @@ using SHJ.BaseFramework.Repository;
 
 namespace SHJ.BaseFramework.EntityFrameworkCore;
 
-public class BaseEFUnitOfWork<TDbContext> : BaseCommandUnitOfWork where TDbContext : DbContext
+public class BaseEFUnitOfWork<TDbContext> : IBaseCommandUnitOfWork where TDbContext : DbContext
 {
     private readonly TDbContext _dbContext;
     public BaseEFUnitOfWork(TDbContext dbContext)
