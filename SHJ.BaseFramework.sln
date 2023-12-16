@@ -15,7 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SHJ.BaseFramework.Dapper", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SHJ.BaseFramework.Shared", "src\SHJ.BaseFramework.Shared\SHJ.BaseFramework.Shared.csproj", "{F034A6AD-4E74-4EA6-B26C-1CC3F95DCA12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHJ.BaseFramework.AspNet", "src\SHJ.BaseFramework.AspNet\SHJ.BaseFramework.AspNet.csproj", "{7B709B22-CFE4-484B-871F-A3DF2F2007BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SHJ.BaseFramework.AspNet", "src\SHJ.BaseFramework.AspNet\SHJ.BaseFramework.AspNet.csproj", "{7B709B22-CFE4-484B-871F-A3DF2F2007BB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{1C3F1C43-FDDA-4834-A3DE-D506859F1F73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHJ.BaseFramework.EntityFrameworkCore.Test", "test\SHJ.BaseFramework.EntityFrameworkCore.Test\SHJ.BaseFramework.EntityFrameworkCore.Test.csproj", "{0D8773B3-E842-4D8E-AC75-BCEEB38B7F65}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +51,10 @@ Global
 		{7B709B22-CFE4-484B-871F-A3DF2F2007BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B709B22-CFE4-484B-871F-A3DF2F2007BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B709B22-CFE4-484B-871F-A3DF2F2007BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D8773B3-E842-4D8E-AC75-BCEEB38B7F65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D8773B3-E842-4D8E-AC75-BCEEB38B7F65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D8773B3-E842-4D8E-AC75-BCEEB38B7F65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D8773B3-E842-4D8E-AC75-BCEEB38B7F65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +66,7 @@ Global
 		{DE3C2CB4-B47C-4BF0-A2F0-FDCDC30CC8FB} = {3A2066A6-9DAA-4547-B23B-ACED6E695AD4}
 		{F034A6AD-4E74-4EA6-B26C-1CC3F95DCA12} = {3A2066A6-9DAA-4547-B23B-ACED6E695AD4}
 		{7B709B22-CFE4-484B-871F-A3DF2F2007BB} = {3A2066A6-9DAA-4547-B23B-ACED6E695AD4}
+		{0D8773B3-E842-4D8E-AC75-BCEEB38B7F65} = {1C3F1C43-FDDA-4834-A3DE-D506859F1F73}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2D939C2E-32AA-408B-A183-C765BA46B124}

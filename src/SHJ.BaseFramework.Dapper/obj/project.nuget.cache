@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+bCagDxpUveK6G8JxBY60NFApYo9LLpuCli5Lfr22F+jVAFvXCKQRhj9xCZN06DpEtDYcxXFHAYJ08zN5fYDQw==",
+  "dgSpecHash": "4mHWgdist7SHr/YXWAF3DSAPpE8ridmRiOgYi/d0gVhYNM35OG3WVeuCOKgbEe9SyADpp9YTuD3RDhXvP8bK1A==",
   "success": true,
   "projectFilePath": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Dapper\\SHJ.BaseFramework.Dapper.csproj",
   "expectedPackageFiles": [
@@ -42,6 +42,7 @@
     "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
+    "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\shj.baseframework.domain\\1.0.0\\shj.baseframework.domain.1.0.0.nupkg.sha512",
     "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\shj.baseframework.repository\\1.0.0\\shj.baseframework.repository.1.0.0.nupkg.sha512",
     "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\shj.baseframework.shared\\1.0.0\\shj.baseframework.shared.1.0.0.nupkg.sha512"
   ],

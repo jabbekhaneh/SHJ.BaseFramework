@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "my46DHuSqcGY/8p2tJlGvydWIVqAQyOaKQSou6PQClUsznhTW0Wx3ZPHklDEzuZXuxYZKfI5EKa0W52yKRU2XA==",
+  "dgSpecHash": "TjySxajUbpyuJuSFoUDP9BaFqrDN7IpHCE8uFxH3gsQ9PAeITFZmP7ypyAGSFH/lGwFuLyHPKN7GEGcsZTKTVA==",
   "success": true,
   "projectFilePath": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.AspNet\\SHJ.BaseFramework.AspNet.csproj",
   "expectedPackageFiles": [
@@ -23,6 +23,7 @@
     "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
     "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\shj.baseframework.domain\\1.0.0\\shj.baseframework.domain.1.0.0.nupkg.sha512",
+    "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\shj.baseframework.repository\\1.0.0\\shj.baseframework.repository.1.0.0.nupkg.sha512",
     "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\shj.baseframework.shared\\1.0.0\\shj.baseframework.shared.1.0.0.nupkg.sha512"
   ],
   "logs": []

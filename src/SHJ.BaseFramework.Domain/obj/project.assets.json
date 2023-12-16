@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "SHJ.BaseFramework.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/SHJ.BaseFramework.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SHJ.BaseFramework.Repository.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "SHJ.BaseFramework.Repository/1.0.0": {
+      "type": "project",
+      "path": "../SHJ.BaseFramework.Repository/SHJ.BaseFramework.Repository.csproj",
+      "msbuildProject": "../SHJ.BaseFramework.Repository/SHJ.BaseFramework.Repository.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "SHJ.BaseFramework.Repository >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\": {},
@@ -40,7 +59,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Repository\\SHJ.BaseFramework.Repository.csproj": {
+              "projectPath": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Repository\\SHJ.BaseFramework.Repository.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -29,7 +29,6 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\SHJ.BaseFramework.Domain\SHJ.BaseFramework.Domain.csproj" />
-		<ProjectReference Include="..\SHJ.BaseFramework.Repository\SHJ.BaseFramework.Repository.csproj" />
 		<ProjectReference Include="..\SHJ.BaseFramework.Shared\SHJ.BaseFramework.Shared.csproj" />
 	</ItemGroup>
 

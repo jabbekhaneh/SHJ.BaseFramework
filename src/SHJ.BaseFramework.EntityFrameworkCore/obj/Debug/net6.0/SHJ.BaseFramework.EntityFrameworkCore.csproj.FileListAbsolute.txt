@@ -23,8 +23,8 @@ E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\bin\Debug\n
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\bin\Debug\net6.0\SHJ.BaseFramework.Repository.dll
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\bin\Debug\net6.0\SHJ.BaseFramework.Shared.dll
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\bin\Debug\net6.0\SHJ.BaseFramework.Domain.pdb
-E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\bin\Debug\net6.0\SHJ.BaseFramework.Repository.pdb
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\bin\Debug\net6.0\SHJ.BaseFramework.Shared.pdb
+E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\bin\Debug\net6.0\SHJ.BaseFramework.Repository.pdb
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\obj\Debug\net6.0\SHJ.BaseFramework.EntityFrameworkCore.csproj.AssemblyReference.cache
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\obj\Debug\net6.0\SHJ.BaseFramework.EntityFrameworkCore.GeneratedMSBuildEditorConfig.editorconfig
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\obj\Debug\net6.0\SHJ.BaseFramework.EntityFrameworkCore.AssemblyInfoInputs.cache

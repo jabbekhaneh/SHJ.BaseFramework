@@ -822,6 +822,9 @@
       "SHJ.BaseFramework.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "SHJ.BaseFramework.Repository": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/SHJ.BaseFramework.Domain.dll": {}
         },
@@ -2152,7 +2155,6 @@
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.0",
       "Microsoft.Extensions.Configuration >= 8.0.0",
       "SHJ.BaseFramework.Domain >= 1.0.0",
-      "SHJ.BaseFramework.Repository >= 1.0.0",
       "SHJ.BaseFramework.Shared >= 1.0.0"
     ]
   },
@@ -2192,9 +2194,6 @@
           "projectReferences": {
             "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Domain\\SHJ.BaseFramework.Domain.csproj": {
               "projectPath": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Domain\\SHJ.BaseFramework.Domain.csproj"
-            },
-            "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Repository\\SHJ.BaseFramework.Repository.csproj": {
-              "projectPath": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Repository\\SHJ.BaseFramework.Repository.csproj"
             },
             "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Shared\\SHJ.BaseFramework.Shared.csproj": {
               "projectPath": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Shared\\SHJ.BaseFramework.Shared.csproj"

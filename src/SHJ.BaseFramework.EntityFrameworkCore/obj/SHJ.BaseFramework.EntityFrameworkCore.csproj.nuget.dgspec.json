@@ -33,7 +33,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Repository\\SHJ.BaseFramework.Repository.csproj": {
+                "projectPath": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Repository\\SHJ.BaseFramework.Repository.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -97,9 +101,6 @@
             "projectReferences": {
               "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Domain\\SHJ.BaseFramework.Domain.csproj": {
                 "projectPath": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Domain\\SHJ.BaseFramework.Domain.csproj"
-              },
-              "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Repository\\SHJ.BaseFramework.Repository.csproj": {
-                "projectPath": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Repository\\SHJ.BaseFramework.Repository.csproj"
               },
               "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Shared\\SHJ.BaseFramework.Shared.csproj": {
                 "projectPath": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Shared\\SHJ.BaseFramework.Shared.csproj"

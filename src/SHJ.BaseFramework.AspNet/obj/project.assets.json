@@ -353,11 +353,24 @@
       "SHJ.BaseFramework.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "SHJ.BaseFramework.Repository": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/SHJ.BaseFramework.Domain.dll": {}
         },
         "runtime": {
           "bin/placeholder/SHJ.BaseFramework.Domain.dll": {}
+        }
+      },
+      "SHJ.BaseFramework.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/SHJ.BaseFramework.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SHJ.BaseFramework.Repository.dll": {}
         }
       },
       "SHJ.BaseFramework.Shared/1.0.0": {
@@ -954,6 +967,11 @@
       "type": "project",
       "path": "../SHJ.BaseFramework.Domain/SHJ.BaseFramework.Domain.csproj",
       "msbuildProject": "../SHJ.BaseFramework.Domain/SHJ.BaseFramework.Domain.csproj"
+    },
+    "SHJ.BaseFramework.Repository/1.0.0": {
+      "type": "project",
+      "path": "../SHJ.BaseFramework.Repository/SHJ.BaseFramework.Repository.csproj",
+      "msbuildProject": "../SHJ.BaseFramework.Repository/SHJ.BaseFramework.Repository.csproj"
     },
     "SHJ.BaseFramework.Shared/1.0.0": {
       "type": "project",

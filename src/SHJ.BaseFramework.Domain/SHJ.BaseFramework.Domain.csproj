@@ -17,4 +17,8 @@
 	  </None>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\SHJ.BaseFramework.Repository\SHJ.BaseFramework.Repository.csproj" />
+	</ItemGroup>
+
 </Project>

@@ -677,6 +677,19 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "SHJ.BaseFramework.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "SHJ.BaseFramework.Repository": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SHJ.BaseFramework.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SHJ.BaseFramework.Domain.dll": {}
+        }
+      },
       "SHJ.BaseFramework.Repository/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -1695,6 +1708,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "SHJ.BaseFramework.Domain/1.0.0": {
+      "type": "project",
+      "path": "../SHJ.BaseFramework.Domain/SHJ.BaseFramework.Domain.csproj",
+      "msbuildProject": "../SHJ.BaseFramework.Domain/SHJ.BaseFramework.Domain.csproj"
+    },
     "SHJ.BaseFramework.Repository/1.0.0": {
       "type": "project",
       "path": "../SHJ.BaseFramework.Repository/SHJ.BaseFramework.Repository.csproj",
@@ -1711,7 +1729,7 @@
       "Dapper >= 2.0.123",
       "Microsoft.EntityFrameworkCore.Sqlite >= 6.0.0",
       "Microsoft.Extensions.Options >= 8.0.0",
-      "SHJ.BaseFramework.Repository >= 1.0.0",
+      "SHJ.BaseFramework.Domain >= 1.0.0",
       "SHJ.BaseFramework.Shared >= 1.0.0",
       "System.Data.SqlClient >= 4.8.3"
     ]
@@ -1750,8 +1768,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Repository\\SHJ.BaseFramework.Repository.csproj": {
-              "projectPath": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Repository\\SHJ.BaseFramework.Repository.csproj"
+            "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Domain\\SHJ.BaseFramework.Domain.csproj": {
+              "projectPath": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Domain\\SHJ.BaseFramework.Domain.csproj"
             },
             "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Shared\\SHJ.BaseFramework.Shared.csproj": {
               "projectPath": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Shared\\SHJ.BaseFramework.Shared.csproj"

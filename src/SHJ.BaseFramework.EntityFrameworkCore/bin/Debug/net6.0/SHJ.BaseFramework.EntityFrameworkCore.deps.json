@@ -14,7 +14,6 @@
           "Microsoft.EntityFrameworkCore.Tools": "6.0.0",
           "Microsoft.Extensions.Configuration": "8.0.0",
           "SHJ.BaseFramework.Domain": "1.0.0",
-          "SHJ.BaseFramework.Repository": "1.0.0",
           "SHJ.BaseFramework.Shared": "1.0.0"
         },
         "runtime": {
@@ -512,6 +511,9 @@
         }
       },
       "SHJ.BaseFramework.Domain/1.0.0": {
+        "dependencies": {
+          "SHJ.BaseFramework.Repository": "1.0.0"
+        },
         "runtime": {
           "SHJ.BaseFramework.Domain.dll": {}
         }
