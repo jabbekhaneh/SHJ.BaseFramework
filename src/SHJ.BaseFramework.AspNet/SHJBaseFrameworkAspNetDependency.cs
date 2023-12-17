@@ -11,6 +11,7 @@ public static class SHJBaseFrameworkAspNetDependency
 {
     /// <summary>
     /// config and set option application
+    /// builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory()).ConfigureContainer<ContainerBuilder>(builder => builder.RegisterModule(new AutofacModule()));
     /// </summary>
     /// <param name="option"> option application</param>
     /// <returns></returns>
@@ -19,6 +20,7 @@ public static class SHJBaseFrameworkAspNetDependency
         services.Configure<BaseOptions>(option);
         services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
         services.AddScoped<BaseClaimService, ClaimService>();
+        
 
         services.AddMvc(mvc =>
         {
@@ -26,6 +28,8 @@ public static class SHJBaseFrameworkAspNetDependency
         });
         return services;
     }
+
+    
     /// <summary>
     /// use baseframework
     /// </summary>

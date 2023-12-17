@@ -52,7 +52,7 @@ public class BaseCommandEFRepository<TDbContext, TEntity> : IBaseCommandReposito
         DbSet.Remove(entity);
     }
 
-    public async Task<TEntity> FindById(long id)
+    public async Task<TEntity> FindByIdAsync(long id)
     {
         var entity = await DbSet.FindAsync(id);
         return entity;

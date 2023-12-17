@@ -47,5 +47,5 @@ public interface IBaseCommandRepository<TEntity>
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    Task<TEntity> FindById(long id);
+    Task<TEntity> FindByIdAsync(long id);
 }
