@@ -21,9 +21,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{1C3F1C43-F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SHJ.BaseFramework.EntityFrameworkCore.Test", "test\SHJ.BaseFramework.EntityFrameworkCore.Test\SHJ.BaseFramework.EntityFrameworkCore.Test.csproj", "{0D8773B3-E842-4D8E-AC75-BCEEB38B7F65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHJ.BaseFramework.Dapper.Test", "test\SHJ.BaseFramework.Dapper.Test\SHJ.BaseFramework.Dapper.Test.csproj", "{5809C627-C799-40BA-8BCC-ECCCACD1B6FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SHJ.BaseFramework.Dapper.Test", "test\SHJ.BaseFramework.Dapper.Test\SHJ.BaseFramework.Dapper.Test.csproj", "{5809C627-C799-40BA-8BCC-ECCCACD1B6FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHJ.BaseFramework.AspNet.Test", "test\SHJ.BaseFramework.AspNet.Test\SHJ.BaseFramework.AspNet.Test.csproj", "{6B9BF20C-84B7-461F-AA6E-A066519FDC25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SHJ.BaseFramework.AspNet.Test", "test\SHJ.BaseFramework.AspNet.Test\SHJ.BaseFramework.AspNet.Test.csproj", "{6B9BF20C-84B7-461F-AA6E-A066519FDC25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHJ.BaseFramework.DependencyInjection", "src\SHJ.BaseFramework.DependencyInjection\SHJ.BaseFramework.DependencyInjection.csproj", "{A21E7916-ED11-41D0-A18E-8ED761B72F02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +69,10 @@ Global
 		{6B9BF20C-84B7-461F-AA6E-A066519FDC25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B9BF20C-84B7-461F-AA6E-A066519FDC25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B9BF20C-84B7-461F-AA6E-A066519FDC25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A21E7916-ED11-41D0-A18E-8ED761B72F02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A21E7916-ED11-41D0-A18E-8ED761B72F02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A21E7916-ED11-41D0-A18E-8ED761B72F02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A21E7916-ED11-41D0-A18E-8ED761B72F02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,6 +87,7 @@ Global
 		{0D8773B3-E842-4D8E-AC75-BCEEB38B7F65} = {1C3F1C43-FDDA-4834-A3DE-D506859F1F73}
 		{5809C627-C799-40BA-8BCC-ECCCACD1B6FE} = {1C3F1C43-FDDA-4834-A3DE-D506859F1F73}
 		{6B9BF20C-84B7-461F-AA6E-A066519FDC25} = {1C3F1C43-FDDA-4834-A3DE-D506859F1F73}
+		{A21E7916-ED11-41D0-A18E-8ED761B72F02} = {3A2066A6-9DAA-4547-B23B-ACED6E695AD4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2D939C2E-32AA-408B-A183-C765BA46B124}
