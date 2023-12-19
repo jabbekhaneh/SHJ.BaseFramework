@@ -25,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SHJ.BaseFramework.Dapper.Te
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SHJ.BaseFramework.AspNet.Test", "test\SHJ.BaseFramework.AspNet.Test\SHJ.BaseFramework.AspNet.Test.csproj", "{6B9BF20C-84B7-461F-AA6E-A066519FDC25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHJ.BaseFramework.DependencyInjection", "src\SHJ.BaseFramework.DependencyInjection\SHJ.BaseFramework.DependencyInjection.csproj", "{A21E7916-ED11-41D0-A18E-8ED761B72F02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SHJ.BaseFramework.DependencyInjection", "src\SHJ.BaseFramework.DependencyInjection\SHJ.BaseFramework.DependencyInjection.csproj", "{A21E7916-ED11-41D0-A18E-8ED761B72F02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
