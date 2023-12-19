@@ -1,11 +1,13 @@
-﻿namespace SHJ.BaseFramework.Repository;
+﻿using SHJ.BaseFramework.DependencyInjection.Contracts;
+
+namespace SHJ.BaseFramework.Repository;
 
 
 /// <summary>
 /// 
 /// </summary>
 /// <typeparam name="TEntity"></typeparam>
-public interface IBaseCommandRepository<TEntity>
+public interface IBaseCommandRepository<TEntity>  : IScopedDependency 
 {
     /// <summary>
     /// 

@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "4mHWgdist7SHr/YXWAF3DSAPpE8ridmRiOgYi/d0gVhYNM35OG3WVeuCOKgbEe9SyADpp9YTuD3RDhXvP8bK1A==",
+  "dgSpecHash": "+/IryZ7ig4/1hJV7lIlq7j8BxCqE19kr7bbBsF8i5BNc1KnMX3FbmhBV4fGrIKKvi8nw3rAdnhrgfUfHUkYqfw==",
   "success": true,
   "projectFilePath": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Dapper\\SHJ.BaseFramework.Dapper.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\autofac\\7.1.0\\autofac.7.1.0.nupkg.sha512",
+    "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\autofac.extensions.dependencyinjection\\8.0.0\\autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.0\\microsoft.data.sqlite.core.6.0.0.nupkg.sha512",
     "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.0\\microsoft.entityframeworkcore.6.0.0.nupkg.sha512",

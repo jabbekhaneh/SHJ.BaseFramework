@@ -1,4 +1,4 @@
-﻿using System.Linq.Expressions;
+﻿using SHJ.BaseFramework.DependencyInjection.Contracts;
 
 namespace SHJ.BaseFramework.Repository;
 
@@ -6,7 +6,7 @@ namespace SHJ.BaseFramework.Repository;
 ///  
 /// </summary>
 /// <typeparam name="TEntity"></typeparam>
-public interface IBaseQueryRepository<TEntity>
+public interface IBaseQueryRepository<TEntity>  : IScopedDependency
 {
     /// <summary>
     /// 

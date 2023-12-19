@@ -36,3 +36,5 @@ E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\obj\Debug\n
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\obj\Debug\net6.0\SHJ.BaseFramework.EntityFrameworkCore.pdb
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\obj\Debug\net6.0\SHJ.BaseFramework.EntityFrameworkCore.genruntimeconfig.cache
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\obj\Debug\net6.0\ref\SHJ.BaseFramework.EntityFrameworkCore.dll
+E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\bin\Debug\net6.0\SHJ.BaseFramework.DependencyInjection.dll
+E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\bin\Debug\net6.0\SHJ.BaseFramework.DependencyInjection.pdb

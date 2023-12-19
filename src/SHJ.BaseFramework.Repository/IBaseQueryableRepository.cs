@@ -1,8 +1,9 @@
-﻿using System.Linq.Expressions;
+﻿using SHJ.BaseFramework.DependencyInjection.Contracts;
+using System.Linq.Expressions;
 
 namespace SHJ.BaseFramework.Repository;
 
-public interface IBaseQueryableRepository<TEntity>
+public interface IBaseQueryableRepository<TEntity> : IScopedDependency
 {
     /// <summary>
     /// 

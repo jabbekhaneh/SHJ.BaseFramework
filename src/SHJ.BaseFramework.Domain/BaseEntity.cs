@@ -1,11 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using SHJ.BaseFramework.Domain.Contracts;
 
 namespace SHJ.BaseFramework.Domain;
 
-public abstract class BaseEntity
+public abstract class BaseEntity<TKey> : IBaseEntity<TKey> 
 {
-    [Key]
-    public Guid Id { get; set; }
+    public TKey Id { get; set; }
     public DateTime? CreatedTime { get; private set; }
     public string? CreatedBy { get; private set; }
     public DateTime? DeletedTime { get; private set; }
@@ -14,7 +13,7 @@ public abstract class BaseEntity
     public DateTime? UpdateTime { get; private set; }
     public string? UpdateBy { get; private set; }
     public string? IP { get; set; } = string.Empty;
-    
+
     public virtual void CreateOn(string createdBy)
     {
         if (string.IsNullOrEmpty(createdBy))
@@ -39,3 +38,9 @@ public abstract class BaseEntity
     }
 }
 
+
+
+
+public abstract class BaseEntity : BaseEntity<Guid>
+{   
+}

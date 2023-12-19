@@ -25,3 +25,5 @@ E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Domain\obj\Debug\net6.0\SHJ.Bas
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Domain\obj\Debug\net6.0\refint\SHJ.BaseFramework.Domain.dll
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Domain\obj\Debug\net6.0\SHJ.BaseFramework.Domain.pdb
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Domain\obj\Debug\net6.0\ref\SHJ.BaseFramework.Domain.dll
+E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Domain\bin\Debug\net6.0\SHJ.BaseFramework.DependencyInjection.dll
+E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Domain\bin\Debug\net6.0\SHJ.BaseFramework.DependencyInjection.pdb

@@ -400,7 +400,6 @@ E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\bin\Debug\net6.0\refs\Mi
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\bin\Debug\net6.0\refs\Microsoft.Extensions.Configuration.KeyPerFile.dll
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\bin\Debug\net6.0\refs\Microsoft.Extensions.Configuration.UserSecrets.dll
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\bin\Debug\net6.0\refs\Microsoft.Extensions.Configuration.Xml.dll
-E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\bin\Debug\net6.0\refs\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\bin\Debug\net6.0\refs\Microsoft.Extensions.DependencyInjection.dll
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\bin\Debug\net6.0\refs\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\bin\Debug\net6.0\refs\Microsoft.Extensions.Diagnostics.HealthChecks.dll
@@ -610,3 +609,5 @@ E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\obj\Debug\net6.0\SHJ.Bas
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\obj\Debug\net6.0\refint\SHJ.BaseFramework.AspNet.dll
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\obj\Debug\net6.0\SHJ.BaseFramework.AspNet.pdb
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\obj\Debug\net6.0\ref\SHJ.BaseFramework.AspNet.dll
+E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\bin\Debug\net6.0\SHJ.BaseFramework.DependencyInjection.dll
+E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\bin\Debug\net6.0\SHJ.BaseFramework.DependencyInjection.pdb

@@ -1,9 +1,11 @@
-﻿namespace SHJ.BaseFramework.Repository;
+﻿using SHJ.BaseFramework.DependencyInjection.Contracts;
+
+namespace SHJ.BaseFramework.Repository;
 
 /// <summary>
 ///  Transaction Manager
 /// </summary>
-public interface IBaseCommandUnitOfWork
+public interface IBaseCommandUnitOfWork : IScopedDependency
 {
     /// <summary>
     /// If you need to control transactions, this method is used to start the transaction.

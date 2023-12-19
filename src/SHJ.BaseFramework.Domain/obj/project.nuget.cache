@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "JUrRQd68p7FAJCJjY5P8Mf6YTrTXfXEBCgOWXE3k9BDkYkQdQgRzcbqxY/eKhkxFnTpHe+PdvmYO6cd6rk4aeA==",
+  "dgSpecHash": "L5ajjVL/EeV412mfDvM0T6GzlBaCDPohOR8K9y8pV3JNiGCVJ7s7zNDtdm9+irtVEZA+SbI7GR8/4R7KfG7Shg==",
   "success": true,
   "projectFilePath": "E:\\mygit\\SHJ.BaseFramework\\src\\SHJ.BaseFramework.Domain\\SHJ.BaseFramework.Domain.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\autofac\\7.1.0\\autofac.7.1.0.nupkg.sha512",
+    "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\autofac.extensions.dependencyinjection\\8.0.0\\autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
     "C:\\Users\\Jabbekhaneh\\.nuget\\packages\\shj.baseframework.repository\\1.0.0\\shj.baseframework.repository.1.0.0.nupkg.sha512"
   ],
   "logs": []

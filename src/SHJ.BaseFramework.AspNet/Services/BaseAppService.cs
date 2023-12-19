@@ -9,13 +9,12 @@ namespace SHJ.BaseFramework.AspNet.Services;
 public abstract class BaseAppService<TEntity>  : BaseApiController where TEntity : BaseEntity
 {
     private readonly BaseResult _result = new();
-    protected BaseClaimService ClaimService => HttpContext.GetBaseClaims();
-    protected IConfiguration Configuration => HttpContext.GetBaseConfiguration();
-    protected BaseHttpContextInfo ClientInfo => HttpContext.GetBaseClientInfo();
+ 
     protected virtual Task<BaseResult> OkAsync()
     {
         return Task.FromResult(_result);
     }
+
     protected virtual Task<BaseResult> ResultAsync(object response)
     {
         _result.SetData(response);

@@ -17,4 +17,8 @@
 		</None>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\SHJ.BaseFramework.DependencyInjection\SHJ.BaseFramework.DependencyInjection.csproj" />
+	</ItemGroup>
+
 </Project>
