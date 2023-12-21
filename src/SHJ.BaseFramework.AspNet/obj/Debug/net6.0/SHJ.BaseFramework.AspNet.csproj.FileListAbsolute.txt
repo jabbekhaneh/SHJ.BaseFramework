@@ -593,11 +593,13 @@ E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\bin\Debug\net6.0\refs\Sy
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\bin\Debug\net6.0\refs\System.Xml.XPath.dll
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\bin\Debug\net6.0\refs\System.Xml.XPath.XDocument.dll
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\bin\Debug\net6.0\refs\WindowsBase.dll
+E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\bin\Debug\net6.0\SHJ.BaseFramework.DependencyInjection.dll
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\bin\Debug\net6.0\SHJ.BaseFramework.Domain.dll
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\bin\Debug\net6.0\SHJ.BaseFramework.Repository.dll
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\bin\Debug\net6.0\SHJ.BaseFramework.Shared.dll
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\bin\Debug\net6.0\SHJ.BaseFramework.Domain.pdb
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\bin\Debug\net6.0\SHJ.BaseFramework.Shared.pdb
+E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\bin\Debug\net6.0\SHJ.BaseFramework.DependencyInjection.pdb
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\bin\Debug\net6.0\SHJ.BaseFramework.Repository.pdb
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\obj\Debug\net6.0\SHJ.BaseFramework.AspNet.csproj.AssemblyReference.cache
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\obj\Debug\net6.0\SHJ.BaseFramework.AspNet.GeneratedMSBuildEditorConfig.editorconfig
@@ -609,5 +611,3 @@ E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\obj\Debug\net6.0\SHJ.Bas
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\obj\Debug\net6.0\refint\SHJ.BaseFramework.AspNet.dll
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\obj\Debug\net6.0\SHJ.BaseFramework.AspNet.pdb
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\obj\Debug\net6.0\ref\SHJ.BaseFramework.AspNet.dll
-E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\bin\Debug\net6.0\SHJ.BaseFramework.DependencyInjection.dll
-E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\bin\Debug\net6.0\SHJ.BaseFramework.DependencyInjection.pdb

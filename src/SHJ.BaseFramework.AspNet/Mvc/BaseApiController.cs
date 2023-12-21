@@ -5,7 +5,7 @@ using SHJ.BaseFramework.Shared;
 namespace SHJ.BaseFramework.AspNet.Mvc;
 
 [ApiController]
-[Route("api/v{version:apiVersion}[controller]")]
+[Route("[controller]")]
 public abstract class BaseApiController : Controller
 {
     protected BaseClaimService ClaimService => HttpContext.GetBaseClaims();

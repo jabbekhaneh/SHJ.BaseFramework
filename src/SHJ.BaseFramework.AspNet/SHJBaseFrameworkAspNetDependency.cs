@@ -20,12 +20,12 @@ public static class SHJBaseFrameworkAspNetDependency
         services.Configure<BaseOptions>(option);
         services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
         services.AddScoped<BaseClaimService, ClaimService>();
-        
 
         services.AddMvc(mvc =>
         {
             mvc.Conventions.Add(new ControllerNameAttributeConvention());
         });
+
         return services;
     }
 
