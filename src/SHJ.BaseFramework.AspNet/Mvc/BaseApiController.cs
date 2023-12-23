@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using SHJ.BaseFramework.AspNet.Attributes;
 using SHJ.BaseFramework.Shared;
 
 namespace SHJ.BaseFramework.AspNet.Mvc;
 
 [ApiController]
+[LogRequest]
 [Route("[controller]")]
 public abstract class BaseApiController : Controller
 {
