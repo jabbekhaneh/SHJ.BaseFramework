@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
-using SHJ.BaseFramework.AspNet.Mvc;
+﻿using SHJ.BaseFramework.AspNet.Mvc;
 using SHJ.BaseFramework.Domain;
 using SHJ.BaseFramework.Shared;
 

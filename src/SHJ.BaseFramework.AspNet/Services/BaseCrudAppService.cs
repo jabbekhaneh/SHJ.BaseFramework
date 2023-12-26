@@ -4,7 +4,7 @@
 /// <summary>
 /// Comming Soon ...
 /// </summary>
-internal class BaseCrudAppService
+internal class BaseCrudAppService<TEntity,TEntityDto>
 {
 
 }

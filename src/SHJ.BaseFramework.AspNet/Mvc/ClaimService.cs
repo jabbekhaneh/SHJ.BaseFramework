@@ -1,16 +1,11 @@
 ﻿using Microsoft.AspNetCore.Http;
 using SHJ.BaseFramework.Shared;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SHJ.BaseFramework.AspNet.Mvc;
 
 
-public class ClaimService : BaseClaimService
+public class ClaimService : IBaseClaimService
 {
     private readonly IHttpContextAccessor _httpContextAccessor;
     public ClaimService(IHttpContextAccessor httpContextAccessor)

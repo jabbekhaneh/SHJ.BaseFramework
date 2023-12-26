@@ -10,15 +10,18 @@ public class LogRequestAttribute : ActionFilterAttribute, IExceptionFilter
     private readonly Stopwatch _stopwatch = new();
 
     private Serilog.Core.Logger _log = new LoggerConfiguration().WriteTo
-                .File($"LogRequestAttribute.txt", rollingInterval: RollingInterval.Year)
+                .File($"Logs/LogRequestAttribute-{DateTime.Now}.txt", rollingInterval: RollingInterval.Year)
                 .WriteTo.Console()
                 .CreateLogger();
-
+    public LogRequestAttribute()
+    {
+        Log.Information($"##################  LogRequestAttribute - {DateTime.Now}  ####################");
+    }
 
     public override void OnActionExecuting(ActionExecutingContext context)
     {
-        Console.ForegroundColor = ConsoleColor.Yellow;
-        _log.Information($"");
+        Console.ForegroundColor = ConsoleColor.DarkBlue;
+        _log.Information($"OnActionExecuting: ");
         _log.Information("************* Executing ***************");
         _log.Information($"start executing : {_stopwatch.ElapsedMilliseconds}");
         _log.Information($"{context.ActionDescriptor.DisplayName}-" + $"time : {DateTime.Now}");
@@ -52,8 +55,8 @@ public class LogRequestAttribute : ActionFilterAttribute, IExceptionFilter
 
     public override void OnActionExecuted(ActionExecutedContext context)
     {
-        Console.ForegroundColor = ConsoleColor.Yellow;
-        _log.Information($"");
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        _log.Information($"OnActionExecuted: ");
         _log.Information("************* Executed ***************");
         _log.Information($"start executed : {_stopwatch.ElapsedMilliseconds}");
         _log.Information($"{context.ActionDescriptor.DisplayName}-" + $"time : {DateTime.Now}");
@@ -77,7 +80,7 @@ public class LogRequestAttribute : ActionFilterAttribute, IExceptionFilter
 
     public void OnException(ExceptionContext context)
     {
-        _log.Information($"OnException");
+        _log.Information($"OnException: ");
         Console.ForegroundColor = ConsoleColor.Red;
         _log.Information("************* Exception ***************");
         _log.Information($"{context.ActionDescriptor.DisplayName}- time : {_stopwatch.ElapsedMilliseconds}");

@@ -1,8 +1,12 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Autofac.Extensions.DependencyInjection;
+using Autofac;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using SHJ.BaseFramework.AspNet.Attributes;
 using SHJ.BaseFramework.AspNet.Mvc;
+using SHJ.BaseFramework.DependencyInjection.Modules;
 using SHJ.BaseFramework.Shared;
 
 namespace SHJ.BaseFramework.AspNet;
@@ -19,17 +23,14 @@ public static class SHJBaseFrameworkAspNetDependency
     {
         services.Configure<BaseOptions>(option);
         services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
-        services.AddScoped<BaseClaimService, ClaimService>();
+        services.AddScoped<IBaseClaimService, ClaimService>();
 
         services.AddMvc(mvc =>
         {
             mvc.Conventions.Add(new ControllerNameAttributeConvention());
         });
-
         return services;
-    }
-
-    
+    }    
     /// <summary>
     /// use baseframework
     /// </summary>
@@ -38,4 +39,12 @@ public static class SHJBaseFrameworkAspNetDependency
     {
         return app;
     }
+
+    /// <summary>
+    /// Configuration Autofact
+    /// </summary>
+    /// <returns></returns>
+    public static IHostBuilder UseAutofac(this IHostBuilder hostBuilder)
+       => hostBuilder.UseServiceProviderFactory(new AutofacServiceProviderFactory())
+                  .ConfigureContainer<ContainerBuilder>(builder => builder.RegisterModule(new AutofacModule()));
 }
