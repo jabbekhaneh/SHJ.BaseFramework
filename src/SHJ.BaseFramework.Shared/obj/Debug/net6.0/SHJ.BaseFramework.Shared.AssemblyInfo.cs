@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("For Asp net Architect")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be6e74e01c40ff930dc4e4ee9f6d500cae54ad37")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+70fc81ef981f841c8053e836bc8e4b76a99b5660")]
 [assembly: System.Reflection.AssemblyProductAttribute("SHJ.BaseFramework.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SHJ.BaseFramework.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

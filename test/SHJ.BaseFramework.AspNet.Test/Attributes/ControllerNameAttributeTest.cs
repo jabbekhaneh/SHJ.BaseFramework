@@ -10,7 +10,7 @@ public class ControllerNameAttributeTest
     {
         string name = "Dummy-name";
 
-        var services = new ControllerNameAttribute(name);
+        var services = new BaseControllerNameAttribute(name);
 
          Assert.Equal(name, services.Name);
     } 

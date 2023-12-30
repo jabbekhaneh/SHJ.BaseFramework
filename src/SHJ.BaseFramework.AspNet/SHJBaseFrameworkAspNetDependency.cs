@@ -26,7 +26,7 @@ public static class SHJBaseFrameworkAspNetDependency
         services.InitializeAutoMapper();
         services.AddMvc(mvc =>
         {
-            mvc.Conventions.Add(new ControllerNameAttributeConvention());
+            mvc.Conventions.Add(new BaseControllerNameAttributeConvention());
         });
         return services;
     }    

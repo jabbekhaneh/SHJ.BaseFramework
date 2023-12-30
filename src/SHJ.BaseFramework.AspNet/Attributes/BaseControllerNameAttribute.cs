@@ -1,10 +1,10 @@
 ﻿namespace Microsoft.AspNetCore.Mvc;
 
 [AttributeUsage(AttributeTargets.Class)]
-public class ControllerNameAttribute : Attribute
+public class BaseControllerNameAttribute : Attribute
 {
     public string Name { get; }
-    public ControllerNameAttribute(string name)
+    public BaseControllerNameAttribute(string name)
     {
         Name = name;
     }
@@ -13,16 +13,16 @@ public class ControllerNameAttribute : Attribute
     {
         return nameType
                    .GetCustomAttributes(true)
-                   .OfType<ControllerNameAttribute>()
+                   .OfType<BaseControllerNameAttribute>()
                    .FirstOrDefault()?.Name ?? nameType.Name;
     }
 }
 
-public class ControllerNameAttributeConvention : IControllerModelConvention
+public class BaseControllerNameAttributeConvention : IControllerModelConvention
 {
     public void Apply(ControllerModel controller)
     {
-        var controllerNameAttribute = controller.Attributes.OfType<ControllerNameAttribute>().SingleOrDefault();
+        var controllerNameAttribute = controller.Attributes.OfType<BaseControllerNameAttribute>().SingleOrDefault();
         if (controllerNameAttribute != null)
         {
             controller.ControllerName = controllerNameAttribute.Name;
