@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using SHJ.BaseFramework.Shared;
 
-namespace SHJ.BaseFramework.AspNet.Mvc;
+namespace Microsoft.AspNetCore.Mvc;
 
 [ApiController]
 [Route("[controller]")]

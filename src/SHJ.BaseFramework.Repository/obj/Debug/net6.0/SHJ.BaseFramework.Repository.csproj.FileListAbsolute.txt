@@ -25,3 +25,4 @@ E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Repository\obj\Debug\net6.0\SHJ
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Repository\obj\Debug\net6.0\refint\SHJ.BaseFramework.Repository.dll
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Repository\obj\Debug\net6.0\SHJ.BaseFramework.Repository.pdb
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Repository\obj\Debug\net6.0\ref\SHJ.BaseFramework.Repository.dll
+E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Repository\obj\Debug\net6.0\SHJ.BaseFramework.Repository.sourcelink.json

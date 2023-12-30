@@ -2,7 +2,7 @@
 using Serilog;
 using System.Diagnostics;
 
-namespace SHJ.BaseFramework.AspNet.Attributes;
+namespace Microsoft.AspNetCore.Mvc;
 
 
 public class LogRequestAttribute : ActionFilterAttribute, IExceptionFilter

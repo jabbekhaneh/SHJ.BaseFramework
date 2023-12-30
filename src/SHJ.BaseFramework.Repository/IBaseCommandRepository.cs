@@ -43,11 +43,11 @@ public interface IBaseCommandRepository<TEntity>  : IScopedDependency
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    Task DeleteById(long id);
+    Task DeleteById(Guid id);
     /// <summary>
     /// 
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    Task<TEntity> FindByIdAsync(long id);
+    Task<TEntity> FindByIdAsync(Guid id);
 }

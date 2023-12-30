@@ -22,4 +22,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\SHJ.BaseFramework.AspNet\SHJ.BaseFramework.AspNet.csproj" />
+  </ItemGroup>
+
 </Project>

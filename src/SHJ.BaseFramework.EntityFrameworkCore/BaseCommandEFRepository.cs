@@ -44,7 +44,7 @@ public class BaseCommandEFRepository<TDbContext, TEntity> : IBaseCommandReposito
         await DbSet.AddRangeAsync(entities);
     }
 
-    public async Task DeleteById(long id)
+    public async Task DeleteById(Guid id)
     {
         var entity = await DbSet.Where(_ => _.Id.Equals(id)).FirstOrDefaultAsync();
         if (entity == null)
@@ -52,7 +52,7 @@ public class BaseCommandEFRepository<TDbContext, TEntity> : IBaseCommandReposito
         DbSet.Remove(entity);
     }
 
-    public async Task<TEntity> FindByIdAsync(long id)
+    public async Task<TEntity> FindByIdAsync(Guid id)
     {
         var entity = await DbSet.FindAsync(id);
         return entity;

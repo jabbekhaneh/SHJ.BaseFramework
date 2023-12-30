@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.ApplicationModels;
-
-namespace SHJ.BaseFramework.AspNet.Attributes;
+﻿namespace Microsoft.AspNetCore.Mvc;
 
 [AttributeUsage(AttributeTargets.Class)]
 public class ControllerNameAttribute : Attribute
@@ -10,7 +8,16 @@ public class ControllerNameAttribute : Attribute
     {
         Name = name;
     }
+
+    public static string GetName(Type nameType)
+    {
+        return nameType
+                   .GetCustomAttributes(true)
+                   .OfType<ControllerNameAttribute>()
+                   .FirstOrDefault()?.Name ?? nameType.Name;
+    }
 }
+
 public class ControllerNameAttributeConvention : IControllerModelConvention
 {
     public void Apply(ControllerModel controller)

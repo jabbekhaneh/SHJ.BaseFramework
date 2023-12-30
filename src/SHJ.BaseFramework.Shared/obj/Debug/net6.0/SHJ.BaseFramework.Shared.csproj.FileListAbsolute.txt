@@ -22,3 +22,11 @@ E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Shared\obj\Debug\net6.0\SHJ.Bas
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Shared\obj\Debug\net6.0\refint\SHJ.BaseFramework.Shared.dll
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Shared\obj\Debug\net6.0\SHJ.BaseFramework.Shared.pdb
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Shared\obj\Debug\net6.0\ref\SHJ.BaseFramework.Shared.dll
+E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Shared\bin\Debug\net6.0\SHJ.BaseFramework.DependencyInjection.dll
+E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Shared\bin\Debug\net6.0\SHJ.BaseFramework.Domain.dll
+E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Shared\bin\Debug\net6.0\SHJ.BaseFramework.Repository.dll
+E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Shared\bin\Debug\net6.0\SHJ.BaseFramework.Domain.pdb
+E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Shared\bin\Debug\net6.0\SHJ.BaseFramework.DependencyInjection.pdb
+E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Shared\bin\Debug\net6.0\SHJ.BaseFramework.Repository.pdb
+E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Shared\obj\Debug\net6.0\SHJ.BaseFramework.Shared.sourcelink.json
+E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Shared\obj\Debug\net6.0\SHJ.BaseFramework.Shared.csproj.CopyComplete

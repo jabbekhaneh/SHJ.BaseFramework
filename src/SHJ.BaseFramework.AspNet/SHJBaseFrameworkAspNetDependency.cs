@@ -4,10 +4,9 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SHJ.BaseFramework.AspNet.Attributes;
-using SHJ.BaseFramework.AspNet.Mvc;
 using SHJ.BaseFramework.DependencyInjection.Modules;
 using SHJ.BaseFramework.Shared;
+using SHJ.BaseFramework.Shared.CustomMappings;
 
 namespace SHJ.BaseFramework.AspNet;
 
@@ -24,7 +23,7 @@ public static class SHJBaseFrameworkAspNetDependency
         services.Configure<BaseOptions>(option);
         services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
         services.AddScoped<IBaseClaimService, ClaimService>();
-
+        services.InitializeAutoMapper();
         services.AddMvc(mvc =>
         {
             mvc.Conventions.Add(new ControllerNameAttributeConvention());

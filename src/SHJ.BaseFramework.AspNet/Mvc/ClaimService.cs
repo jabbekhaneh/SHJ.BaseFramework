@@ -2,7 +2,7 @@
 using SHJ.BaseFramework.Shared;
 using System.Security.Claims;
 
-namespace SHJ.BaseFramework.AspNet.Mvc;
+namespace Microsoft.AspNetCore.Mvc;
 
 
 public class ClaimService : IBaseClaimService

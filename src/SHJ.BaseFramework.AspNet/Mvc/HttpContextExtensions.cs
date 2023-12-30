@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using SHJ.BaseFramework.Shared;
 
-namespace SHJ.BaseFramework.AspNet.Mvc;
+namespace Microsoft.AspNetCore.Mvc;
 
 public static class HttpContextExtensions
 {
