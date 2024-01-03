@@ -595,9 +595,9 @@ E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\obj\Debug\net6.0\SHJ.Bas
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\obj\Debug\net6.0\SHJ.BaseFramework.AspNet.AssemblyInfoInputs.cache
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\obj\Debug\net6.0\SHJ.BaseFramework.AspNet.AssemblyInfo.cs
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\obj\Debug\net6.0\SHJ.BaseFramework.AspNet.csproj.CoreCompileInputs.cache
+E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\obj\Debug\net6.0\SHJ.BaseFramework.AspNet.sourcelink.json
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\obj\Debug\net6.0\SHJ.BaseFramework.AspNet.csproj.CopyComplete
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\obj\Debug\net6.0\SHJ.BaseFramework.AspNet.dll
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\obj\Debug\net6.0\refint\SHJ.BaseFramework.AspNet.dll
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\obj\Debug\net6.0\SHJ.BaseFramework.AspNet.pdb
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\obj\Debug\net6.0\ref\SHJ.BaseFramework.AspNet.dll
-E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.AspNet\obj\Debug\net6.0\SHJ.BaseFramework.AspNet.sourcelink.json

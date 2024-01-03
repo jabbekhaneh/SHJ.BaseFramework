@@ -7,7 +7,7 @@
     <icon>logo.png</icon>
     <projectUrl>https://github.com/jabbekhaneh/SHJ.BaseArchitecture</projectUrl>
     <description>For Asp net Architect</description>
-    <repository type="git" url="https://github.com/jabbekhaneh/SHJ.BaseFramework" commit="70fc81ef981f841c8053e836bc8e4b76a99b5660" />
+    <repository type="git" url="https://github.com/jabbekhaneh/SHJ.BaseFramework" commit="4359e08f2245d872ac803495f5b738e6485f90f0" />
     <dependencies>
       <group targetFramework="net6.0">
         <dependency id="SHJ.BaseFramework.Domain" version="1.0.0" exclude="Build,Analyzers" />

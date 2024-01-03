@@ -31,9 +31,9 @@ E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Dapper\obj\Debug\net6.0\SHJ.Bas
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Dapper\obj\Debug\net6.0\SHJ.BaseFramework.Dapper.AssemblyInfoInputs.cache
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Dapper\obj\Debug\net6.0\SHJ.BaseFramework.Dapper.AssemblyInfo.cs
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Dapper\obj\Debug\net6.0\SHJ.BaseFramework.Dapper.csproj.CoreCompileInputs.cache
+E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Dapper\obj\Debug\net6.0\SHJ.BaseFramework.Dapper.sourcelink.json
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Dapper\obj\Debug\net6.0\SHJ.BaseFramework.Dapper.csproj.CopyComplete
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Dapper\obj\Debug\net6.0\SHJ.BaseFramework.Dapper.dll
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Dapper\obj\Debug\net6.0\refint\SHJ.BaseFramework.Dapper.dll
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Dapper\obj\Debug\net6.0\SHJ.BaseFramework.Dapper.pdb
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Dapper\obj\Debug\net6.0\ref\SHJ.BaseFramework.Dapper.dll
-E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.Dapper\obj\Debug\net6.0\SHJ.BaseFramework.Dapper.sourcelink.json

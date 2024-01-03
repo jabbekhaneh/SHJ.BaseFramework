@@ -19,7 +19,7 @@ public static class PaginationToolser
 }
 public class PaginationDto<T>
 {
-    public IQueryable<T> Query { get; set; }
+    public IQueryable<T>? Query { get; set; }
     public int PageSize { get; set; }
 
 }

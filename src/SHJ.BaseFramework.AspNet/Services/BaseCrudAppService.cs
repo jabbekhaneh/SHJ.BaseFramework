@@ -12,13 +12,13 @@ public class BaseCrudAppService<TEntity, TSelectDto, TCreateDto, TUpdateDto> : B
     where TCreateDto : BaseDto
     where TUpdateDto : BaseDto
 {
-
     private readonly BaseResult _result = new();
     protected IBaseCommandRepository<TEntity> CommandRepository;
     protected IBaseQueryableRepository<TEntity> QueryableRepository;
     protected IBaseCommandUnitOfWork UnitOfWork;
     protected IQueryable<TEntity> Query;
     protected readonly IMapper Mapper;
+
     protected BaseCrudAppService(IBaseCommandRepository<TEntity> commandRepository, IBaseQueryableRepository<TEntity> queryableRepository, IMapper mapper, IBaseCommandUnitOfWork unitOfWork)
     {
         CommandRepository = commandRepository;
@@ -30,15 +30,15 @@ public class BaseCrudAppService<TEntity, TSelectDto, TCreateDto, TUpdateDto> : B
 
     [HttpGet]
     public virtual async Task<BaseResult> Get(BaseFilterDto filter)
-
     {
         var source = Query.ProjectTo<TSelectDto>(Mapper.ConfigurationProvider)
             .Pagination<TSelectDto>(filter.Take, filter.PageId);
+
         return await ResultAsync(source);
     }
 
     [HttpGet("{id}")]
-    public virtual TSelectDto Get(Guid id)
+    public virtual BaseResult<TSelectDto> Get(Guid id)
 
     {
         var dto = Query.ProjectTo<TSelectDto>(Mapper.ConfigurationProvider)
@@ -47,48 +47,39 @@ public class BaseCrudAppService<TEntity, TSelectDto, TCreateDto, TUpdateDto> : B
         if (dto == null)
             throw new ArgumentNullException(nameof(id));
 
-        return dto;
+        return BaseResult<TSelectDto>.Build(dto);
     }
 
     [HttpPut]
-    public virtual async Task Update(TUpdateDto input)
-
+    public virtual async Task<BaseResult> Update(TUpdateDto input)
     {
         var model = Mapper.Map<TEntity>(CastToDerivedClass(Mapper, input));
         CommandRepository.Update(model);
         await UnitOfWork.CommitAsync();
+        return await OkAsync();
     }
 
     [HttpPost]
-    public virtual async Task<Guid> Create(TCreateDto input)
-
+    public virtual async Task<BaseResult<Guid>> Create(TCreateDto input)
     {
         var model = Mapper.Map<TEntity>(CastToDerivedClass(Mapper, input));
         await CommandRepository.InsertAsync(model);
         await UnitOfWork.CommitAsync();
-        return model.Id;
+        return BaseResult<Guid>.Build(model.Id);
     }
 
     [HttpDelete]
-    public virtual async Task Delete(Guid id)
+    public virtual async Task<BaseResult> Delete(Guid id)
     {
         var model = Query.FirstOrDefault(_ => _.Id == id);
         if (model == null)
             throw new ArgumentNullException(nameof(TEntity));
         CommandRepository.Delete(model);
         await UnitOfWork.CommitAsync();
+        return await OkAsync();
     }
-    protected virtual Task<BaseResult> ResultAsync(object response)
-    {
-        _result.SetData(response);
-        _result.SetStatus(BaseStatusCodes.OK);
-        _result.IsValid();
-        return Task.FromResult(_result);
-    }
-    protected BaseDto CastToDerivedClass(IMapper mapper, BaseDto baseInstance)
-    {
-        return mapper.Map<BaseDto>(baseInstance);
-    }
+
+
 }
 
 

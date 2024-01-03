@@ -36,6 +36,7 @@ public abstract class BaseEntity<TKey> : IBaseEntity<TKey>
         DeletedTime = DateTime.Now;
         IsDeleted = true;
     }
+
 }
 
 

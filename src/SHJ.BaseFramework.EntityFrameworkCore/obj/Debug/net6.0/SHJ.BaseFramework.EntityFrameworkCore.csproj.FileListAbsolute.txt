@@ -32,10 +32,10 @@ E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\obj\Debug\n
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\obj\Debug\net6.0\SHJ.BaseFramework.EntityFrameworkCore.AssemblyInfoInputs.cache
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\obj\Debug\net6.0\SHJ.BaseFramework.EntityFrameworkCore.AssemblyInfo.cs
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\obj\Debug\net6.0\SHJ.BaseFramework.EntityFrameworkCore.csproj.CoreCompileInputs.cache
+E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\obj\Debug\net6.0\SHJ.BaseFramework.EntityFrameworkCore.sourcelink.json
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\obj\Debug\net6.0\SHJ.BaseFramework.EntityFrameworkCore.csproj.CopyComplete
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\obj\Debug\net6.0\SHJ.BaseFramework.EntityFrameworkCore.dll
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\obj\Debug\net6.0\refint\SHJ.BaseFramework.EntityFrameworkCore.dll
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\obj\Debug\net6.0\SHJ.BaseFramework.EntityFrameworkCore.pdb
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\obj\Debug\net6.0\SHJ.BaseFramework.EntityFrameworkCore.genruntimeconfig.cache
 E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\obj\Debug\net6.0\ref\SHJ.BaseFramework.EntityFrameworkCore.dll
-E:\mygit\SHJ.BaseFramework\src\SHJ.BaseFramework.EntityFrameworkCore\obj\Debug\net6.0\SHJ.BaseFramework.EntityFrameworkCore.sourcelink.json
