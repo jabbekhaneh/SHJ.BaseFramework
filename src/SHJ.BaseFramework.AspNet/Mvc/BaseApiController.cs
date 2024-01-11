@@ -14,7 +14,7 @@ public abstract class BaseApiController : Controller
     protected BaseHttpContextInfo ClientInfo => HttpContext.GetBaseClientInfo();
     protected bool IsAuthenticated => HttpContext.GetBaseClaims().IsAuthenticated();
 
-    private readonly BaseResult _result = new();
+    protected readonly BaseResult _result = new();
 
     protected virtual Task<BaseResult> OkAsync()
     {
@@ -28,16 +28,48 @@ public abstract class BaseApiController : Controller
         _result.IsValid();
         return Task.FromResult(_result);
     }
-    protected virtual BaseResult ReturnResult(object response)
+    protected virtual BaseResult ReturnResult(object response, int status)
+    {
+        _result.SetData(response);
+        _result.SetStatus(status);
+        _result.IsValid();
+        return _result;
+    }
+    protected virtual Task<BaseResult> ReturnResultAsync(object response)
     {
         _result.SetData(response);
         _result.SetStatus(BaseStatusCodes.OK);
         _result.IsValid();
-        return _result;
+        return Task.FromResult(_result);
+    }
+    protected virtual Task<BaseResult> ReturnResultAsync(object response, int status)
+    {
+        _result.SetData(response);
+        _result.SetStatus(status);
+        _result.IsValid();
+        return Task.FromResult(_result);
     }
     protected void AddMessage(string message)
     {
         _result.AddMessage(message);
+    }
+    protected void AddMessages(IEnumerable<string> messages)
+    {
+        _result.AddMessages(messages);
+    }
+    protected virtual BaseResult FailRequest(object response)
+    {
+        _result.SetData(response);
+        _result.SetStatus(BaseStatusCodes.BadRequest);
+        _result.IsValid();
+        return _result;
+    }
+    protected virtual Task<BaseResult> FailRequestAsync(object response)
+    {
+        _result.SetData(response);
+        _result.SetStatus(BaseStatusCodes.BadRequest);
+        _result.IsValid();
+        return Task.FromResult(_result);
     }
     public BaseDto CastToDerivedClass(IMapper mapper, BaseDto baseInstance)
     {
