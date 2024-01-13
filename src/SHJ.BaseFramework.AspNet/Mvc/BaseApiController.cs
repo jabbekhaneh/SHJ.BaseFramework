@@ -16,6 +16,10 @@ public abstract class BaseApiController : Controller
 
     protected readonly BaseResult _result = new();
 
+    protected virtual BaseResult OK()
+    {
+        return _result;
+    }
     protected virtual Task<BaseResult> OkAsync()
     {
         return Task.FromResult(_result);
@@ -57,12 +61,37 @@ public abstract class BaseApiController : Controller
     {
         _result.AddMessages(messages);
     }
+    protected virtual BaseResult FailRequest()
+    {
+        _result.SetStatus(BaseStatusCodes.BadRequest);
+        _result.IsValid();
+        return _result;
+    }
     protected virtual BaseResult FailRequest(object response)
     {
         _result.SetData(response);
         _result.SetStatus(BaseStatusCodes.BadRequest);
         _result.IsValid();
         return _result;
+    }
+    protected virtual BaseResult FailRequest(int status)
+    {
+        _result.SetStatus(status);
+        _result.IsValid();
+        return _result;
+    }
+    protected virtual BaseResult FailRequest(object response,int status)
+    {
+        _result.SetData(response);
+        _result.SetStatus(status);
+        _result.IsValid();
+        return _result;
+    }
+    protected virtual Task<BaseResult> FailRequestAsync()
+    {
+        _result.SetStatus(BaseStatusCodes.BadRequest);
+        _result.IsValid();
+        return Task.FromResult(_result);
     }
     protected virtual Task<BaseResult> FailRequestAsync(object response)
     {
@@ -71,7 +100,24 @@ public abstract class BaseApiController : Controller
         _result.IsValid();
         return Task.FromResult(_result);
     }
-    public BaseDto CastToDerivedClass(IMapper mapper, BaseDto baseInstance)
+    protected virtual Task<BaseResult> FailRequestAsync(int status)
+    {
+
+        _result.SetStatus(status);
+        _result.IsValid();
+        return Task.FromResult(_result);
+    }
+
+
+    protected virtual Task<BaseResult> FailRequestAsync(object response,int status)
+    {
+        _result.SetData(response);
+        _result.SetStatus(status);
+        _result.IsValid();
+        return Task.FromResult(_result);
+    }
+
+    protected virtual BaseDto CastToDerivedClass(IMapper mapper, BaseDto baseInstance)
     {
         return mapper.Map<BaseDto>(baseInstance);
     }

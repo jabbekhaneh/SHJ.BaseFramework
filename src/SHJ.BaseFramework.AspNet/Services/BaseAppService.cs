@@ -8,7 +8,7 @@ namespace SHJ.BaseFramework.AspNet.Services;
 
 public abstract class BaseAppService<TEntity> : BaseApiController where TEntity : BaseEntity
 {
-    private readonly BaseResult _result = new();
+    
 
     protected IBaseCommandRepository<TEntity> CommandRepository;
     protected IBaseQueryableRepository<TEntity> QueryableRepository;
