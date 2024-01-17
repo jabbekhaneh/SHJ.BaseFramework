@@ -4,7 +4,7 @@ namespace SHJ.BaseFramework.Shared;
 
 public class BaseResult
 {
-    public bool IsSuccess { get; private set; }
+    public bool IsSuccess { get; private set; } = true;
     public int Status { get; private set; }
     public object? Result { get; private set; }
     public List<string> Messages { get; private set; } = new();
@@ -23,7 +23,7 @@ public class BaseResult<TResult>
     }
     public TResult? Result { get; private set; }
 
-    public bool IsSuccess { get; private set; }
+    public bool IsSuccess { get; private set; } = true;
     public int Status { get; private set; }
     public List<string> Messages { get; private set; } = new();
     public void ClearMessages() => Messages.Clear();
@@ -39,7 +39,7 @@ public class BaseResult<TResult>
 
     public static BaseResult<TResult> BuildFailure(List<string> message)
     {
-        return new BaseResult<TResult> { IsSuccess = false,Messages = message};
+        return new BaseResult<TResult> { IsSuccess = false, Messages = message };
     }
 
 

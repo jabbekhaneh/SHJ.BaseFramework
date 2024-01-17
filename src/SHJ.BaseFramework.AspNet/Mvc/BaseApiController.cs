@@ -18,20 +18,23 @@ public abstract class BaseApiController : Controller
 
     protected virtual BaseResult OK()
     {
+        _result.SetStatus(BaseStatusCodes.OK);
         return _result;
+    }
+    protected virtual BaseResult<TResult> OK<TResult>(TResult result)
+    {
+        return BaseResult<TResult>.Build(result);
     }
     protected virtual Task<BaseResult> OkAsync()
     {
+        _result.SetStatus(BaseStatusCodes.OK);
         return Task.FromResult(_result);
+    }
+    protected virtual Task<BaseResult<TResult>> OkAsync<TResult>(TResult result)
+    {
+        return Task.FromResult(BaseResult<TResult>.Build(result));
     }
 
-    protected virtual Task<BaseResult> ResultAsync(object response)
-    {
-        _result.SetData(response);
-        _result.SetStatus(BaseStatusCodes.OK);
-        _result.IsValid();
-        return Task.FromResult(_result);
-    }
     protected virtual BaseResult ReturnResult(object response, int status)
     {
         _result.SetData(response);
@@ -39,6 +42,7 @@ public abstract class BaseApiController : Controller
         _result.IsValid();
         return _result;
     }
+
     protected virtual Task<BaseResult> ReturnResultAsync(object response)
     {
         _result.SetData(response);
@@ -46,6 +50,9 @@ public abstract class BaseApiController : Controller
         _result.IsValid();
         return Task.FromResult(_result);
     }
+
+
+
     protected virtual Task<BaseResult> ReturnResultAsync(object response, int status)
     {
         _result.SetData(response);
@@ -53,14 +60,7 @@ public abstract class BaseApiController : Controller
         _result.IsValid();
         return Task.FromResult(_result);
     }
-    protected void AddMessage(string message)
-    {
-        _result.AddMessage(message);
-    }
-    protected void AddMessages(IEnumerable<string> messages)
-    {
-        _result.AddMessages(messages);
-    }
+
     protected virtual BaseResult FailRequest()
     {
         _result.SetStatus(BaseStatusCodes.BadRequest);
@@ -80,7 +80,8 @@ public abstract class BaseApiController : Controller
         _result.IsValid();
         return _result;
     }
-    protected virtual BaseResult FailRequest(object response,int status)
+
+    protected virtual BaseResult FailRequest(object response, int status)
     {
         _result.SetData(response);
         _result.SetStatus(status);
@@ -109,7 +110,7 @@ public abstract class BaseApiController : Controller
     }
 
 
-    protected virtual Task<BaseResult> FailRequestAsync(object response,int status)
+    protected virtual Task<BaseResult> FailRequestAsync(object response, int status)
     {
         _result.SetData(response);
         _result.SetStatus(status);
@@ -117,8 +118,19 @@ public abstract class BaseApiController : Controller
         return Task.FromResult(_result);
     }
 
+
+    protected void AddMessage(string message)
+    {
+        _result.AddMessage(message);
+    }
+    protected void AddMessages(IEnumerable<string> messages)
+    {
+        _result.AddMessages(messages);
+    }
+
     protected virtual BaseDto CastToDerivedClass(IMapper mapper, BaseDto baseInstance)
     {
         return mapper.Map<BaseDto>(baseInstance);
     }
+
 }
