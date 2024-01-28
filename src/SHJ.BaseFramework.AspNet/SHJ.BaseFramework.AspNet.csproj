@@ -5,7 +5,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<PackageIcon>logo.png</PackageIcon>
-		<PackageProjectUrl>https://github.com/jabbekhaneh/SHJ.BaseArchitecture</PackageProjectUrl>
+		<PackageProjectUrl>https://github.com/jabbekhaneh/SHJ.Commerce</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/jabbekhaneh/SHJ.BaseFramework</RepositoryUrl>
 		<Description>For Asp net Architect</Description>
 	</PropertyGroup>

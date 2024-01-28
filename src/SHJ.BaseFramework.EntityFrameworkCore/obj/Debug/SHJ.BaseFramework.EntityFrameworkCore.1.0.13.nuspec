@@ -5,9 +5,9 @@
     <version>1.0.13</version>
     <authors>SHJ.BaseFramework.EntityFrameworkCore</authors>
     <icon>logo.png</icon>
-    <projectUrl>https://github.com/jabbekhaneh/SHJ.BaseArchitecture</projectUrl>
+    <projectUrl>https://github.com/jabbekhaneh/SHJ.Commerce</projectUrl>
     <description>For Asp net Architect</description>
-    <repository type="git" url="https://github.com/jabbekhaneh/SHJ.BaseFramework" commit="4359e08f2245d872ac803495f5b738e6485f90f0" />
+    <repository type="git" url="https://github.com/jabbekhaneh/SHJ.BaseFramework" commit="c413081e1a9b72ce3ef8276a1ed82b37f281715a" />
     <dependencies>
       <group targetFramework="net6.0">
         <dependency id="SHJ.BaseFramework.Domain" version="1.0.0" exclude="Build,Analyzers" />

@@ -12,19 +12,16 @@ public class BaseCrudAppService<TEntity, TSelectDto, TCreateDto, TUpdateDto> : B
     where TCreateDto : BaseDto
     where TUpdateDto : BaseDto
 {
-    private readonly BaseResult _result = new();
     protected IBaseCommandRepository<TEntity> CommandRepository;
     protected IBaseQueryableRepository<TEntity> QueryableRepository;
     protected IBaseCommandUnitOfWork UnitOfWork;
     protected IQueryable<TEntity> Query;
-    protected readonly IMapper Mapper;
 
-    protected BaseCrudAppService(IBaseCommandRepository<TEntity> commandRepository, IBaseQueryableRepository<TEntity> queryableRepository, IMapper mapper, IBaseCommandUnitOfWork unitOfWork)
+    protected BaseCrudAppService(IBaseCommandRepository<TEntity> commandRepository, IBaseQueryableRepository<TEntity> queryableRepository, IBaseCommandUnitOfWork unitOfWork)
     {
         CommandRepository = commandRepository;
         QueryableRepository = queryableRepository;
         Query = QueryableRepository.GetQueryable();
-        Mapper = mapper;
         UnitOfWork = unitOfWork;
     }
 
@@ -32,9 +29,9 @@ public class BaseCrudAppService<TEntity, TSelectDto, TCreateDto, TUpdateDto> : B
     public virtual async Task<BaseResult> Get(BaseFilterDto filter)
     {
         var source = Query.ProjectTo<TSelectDto>(Mapper.ConfigurationProvider)
-            .Pagination<TSelectDto>(filter.Take, filter.PageId);
+            .Pagination<TSelectDto>(filter.Take ?? 40, filter.PageId ?? 1);
 
-        return await ResultAsync(source);
+        return await ReturnResultAsync(source);
     }
 
     [HttpGet("{id}")]

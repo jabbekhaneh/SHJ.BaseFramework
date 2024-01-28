@@ -9,12 +9,12 @@ namespace Microsoft.AspNetCore.Mvc;
 [Route("[controller]")]
 public abstract class BaseApiController : Controller
 {
+    protected readonly BaseResult _result = new();
     protected IBaseClaimService ClaimService => HttpContext.GetBaseClaims();
     protected IConfiguration Configuration => HttpContext.GetBaseConfiguration();
     protected BaseHttpContextInfo ClientInfo => HttpContext.GetBaseClientInfo();
     protected bool IsAuthenticated => HttpContext.GetBaseClaims().IsAuthenticated();
-
-    protected readonly BaseResult _result = new();
+    protected IMapper Mapper => HttpContext.GetMapperServices();
 
     protected virtual BaseResult OK()
     {
