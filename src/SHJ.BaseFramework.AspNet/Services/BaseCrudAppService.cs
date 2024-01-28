@@ -16,13 +16,15 @@ public class BaseCrudAppService<TEntity, TSelectDto, TCreateDto, TUpdateDto> : B
     protected IBaseQueryableRepository<TEntity> QueryableRepository;
     protected IBaseCommandUnitOfWork UnitOfWork;
     protected IQueryable<TEntity> Query;
+    protected IMapper Mapper;
 
-    protected BaseCrudAppService(IBaseCommandRepository<TEntity> commandRepository, IBaseQueryableRepository<TEntity> queryableRepository, IBaseCommandUnitOfWork unitOfWork)
+    protected BaseCrudAppService(IBaseCommandRepository<TEntity> commandRepository, IBaseQueryableRepository<TEntity> queryableRepository, IBaseCommandUnitOfWork unitOfWork, IMapper mapper)
     {
         CommandRepository = commandRepository;
         QueryableRepository = queryableRepository;
         Query = QueryableRepository.GetQueryable();
         UnitOfWork = unitOfWork;
+        Mapper = mapper;
     }
 
     [HttpGet]

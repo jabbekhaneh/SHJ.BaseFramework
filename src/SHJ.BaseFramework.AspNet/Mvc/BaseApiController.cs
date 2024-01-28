@@ -14,7 +14,7 @@ public abstract class BaseApiController : Controller
     protected IConfiguration Configuration => HttpContext.GetBaseConfiguration();
     protected BaseHttpContextInfo ClientInfo => HttpContext.GetBaseClientInfo();
     protected bool IsAuthenticated => HttpContext.GetBaseClaims().IsAuthenticated();
-    protected IMapper Mapper => HttpContext.GetMapperServices();
+    
 
     protected virtual BaseResult OK()
     {

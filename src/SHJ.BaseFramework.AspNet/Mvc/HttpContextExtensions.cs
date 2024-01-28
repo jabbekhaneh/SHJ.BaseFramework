@@ -16,8 +16,7 @@ public static class HttpContextExtensions
         httpContext.Connection.RemoteIpAddress.ToString();
     public static string GetBaseLocalIpAddress(this HttpContext httpContext) =>
         httpContext.Connection.LocalIpAddress.ToString();
-    public static IMapper GetMapperServices(this HttpContext httpContext) =>
-         (IMapper)httpContext.RequestServices.GetService(typeof(IMapper));
+    
     
     public static BaseHttpContextInfo GetBaseClientInfo(this HttpContext httpContext)
     {

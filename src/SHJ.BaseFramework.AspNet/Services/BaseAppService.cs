@@ -6,8 +6,6 @@ namespace SHJ.BaseFramework.AspNet.Services;
 
 public abstract class BaseAppService<TEntity> : BaseApiController where TEntity : BaseEntity
 {
-
-
     protected IBaseCommandRepository<TEntity> CommandRepository;
     protected IBaseQueryableRepository<TEntity> QueryableRepository;
     protected IBaseCommandUnitOfWork UnitOfWork;
@@ -23,6 +21,6 @@ public abstract class BaseAppService<TEntity> : BaseApiController where TEntity 
 
 public abstract class BaseAppService : BaseApiController
 {
-
+    
 }
 
