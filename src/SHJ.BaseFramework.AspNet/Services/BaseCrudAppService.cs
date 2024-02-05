@@ -78,7 +78,6 @@ public class BaseCrudAppService<TEntity, TSelectDto, TCreateDto, TUpdateDto> : B
         return await OkAsync();
     }
 
-
 }
 
 

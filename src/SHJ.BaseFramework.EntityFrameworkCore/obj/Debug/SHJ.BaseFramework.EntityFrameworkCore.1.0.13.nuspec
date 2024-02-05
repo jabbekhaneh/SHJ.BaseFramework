@@ -7,7 +7,7 @@
     <icon>logo.png</icon>
     <projectUrl>https://github.com/jabbekhaneh/SHJ.Commerce</projectUrl>
     <description>For Asp net Architect</description>
-    <repository type="git" url="https://github.com/jabbekhaneh/SHJ.BaseFramework" commit="c413081e1a9b72ce3ef8276a1ed82b37f281715a" />
+    <repository type="git" url="https://github.com/jabbekhaneh/SHJ.BaseFramework" commit="1288c8045ba1513743166512fe3977c5fbadced6" />
     <dependencies>
       <group targetFramework="net6.0">
         <dependency id="SHJ.BaseFramework.Domain" version="1.0.0" exclude="Build,Analyzers" />

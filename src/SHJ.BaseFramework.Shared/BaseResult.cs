@@ -37,9 +37,9 @@ public class BaseResult<TResult>
         return new BaseResult<TResult> { IsSuccess = true, Result = result };
     }
 
-    public static BaseResult<TResult> BuildFailure(List<string> message)
+    public static BaseResult<TResult> BuildFailure(List<string> messages)
     {
-        return new BaseResult<TResult> { IsSuccess = false, Messages = message };
+        return new BaseResult<TResult> { IsSuccess = false, Messages = messages };
     }
 
 

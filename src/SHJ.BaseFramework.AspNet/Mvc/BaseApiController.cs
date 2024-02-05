@@ -42,7 +42,6 @@ public abstract class BaseApiController : Controller
         _result.IsValid();
         return _result;
     }
-
     protected virtual Task<BaseResult> ReturnResultAsync(object response)
     {
         _result.SetData(response);
@@ -50,8 +49,6 @@ public abstract class BaseApiController : Controller
         _result.IsValid();
         return Task.FromResult(_result);
     }
-
-
 
     protected virtual Task<BaseResult> ReturnResultAsync(object response, int status)
     {
@@ -80,6 +77,10 @@ public abstract class BaseApiController : Controller
         _result.IsValid();
         return _result;
     }
+    protected virtual BaseResult<TResult> FailRequest<TResult>()
+    {
+        return BaseResult<TResult>.BuildFailure(_result.Messages);
+    }
 
     protected virtual BaseResult FailRequest(object response, int status)
     {
@@ -93,6 +94,10 @@ public abstract class BaseApiController : Controller
         _result.SetStatus(BaseStatusCodes.BadRequest);
         _result.IsValid();
         return Task.FromResult(_result);
+    }
+    protected virtual Task<BaseResult<TResult>> FailRequestAsync<TResult>()
+    {
+        return Task.FromResult(BaseResult<TResult>.BuildFailure(_result.Messages));
     }
     protected virtual Task<BaseResult> FailRequestAsync(object response)
     {
@@ -118,7 +123,7 @@ public abstract class BaseApiController : Controller
         return Task.FromResult(_result);
     }
 
-
+   
     protected void AddMessage(string message)
     {
         _result.AddMessage(message);
